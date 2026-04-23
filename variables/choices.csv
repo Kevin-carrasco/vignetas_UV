@@ -1,0 +1,321 @@
+list_name,name,label
+sex_list,1,Hombre
+sex_list,2,Mujer
+sex_list,3,Otro
+sex_list,4,Prefiero no responder
+gen_list,1,Masculino
+gen_list,2,Femenino
+gen_list,3,Transmasculino
+gen_list,4,Transfemenino
+gen_list,5,No binario
+gen_list,6,Otro género
+gen_list,7,Prefiero no responder
+curso,1,Primero básico
+curso,2,Segundo básico
+curso,3,Tercero básico
+curso,4,Otro
+educacion,1,Educación básica incompleta
+educacion,2,Educación básica completa
+educacion,3,Educación media científico-humanista incompleta
+educacion,4,Educación media científico-humanista completa
+educacion,5,Educación media técnico-profesional incompleta
+educacion,6,Educación media técnico-profesional completa
+educacion,7,Técnico nivel superior incompleto -carreras de 1 a 3 años-
+educacion,8,Técnico nivel superior completo -carreras de 1 a 3 años-
+educacion,9,Profesional incompleto -carreras de 4 años o más-
+educacion,10,Profesional completo -carreras de 4 años o más-
+educacion,11,"Estudios de postgrado, magister/master, doctorado"
+pais,1,Chilena
+pais,2,Peruana
+pais,3,Boliviana
+pais,4,Colombiana
+pais,5,Venezolana
+pais,6,Haitiana
+pais,7,Otra
+region,1,Arica y Parinacota
+region,2,Tarapacá
+region,3,Antofagasta
+region,4,Atacama
+region,5,Coquimbo
+region,6,Valparaíso
+region,7,Región Metropolitana de Santiago
+region,8,Libertador General Bernardo O’Higgins
+region,9,Maule
+region,10,Ñuble
+region,11,Biobío
+region,12,La Araucanía
+region,13,Los Ríos
+region,14,Los Lagos
+region,15,Aysén del General Carlos Ibáñez del Campo
+region,16,Magallanes y de la Antártica Chilena
+comuna_rm,1,Alhué
+comuna_rm,2,Buin
+comuna_rm,3,Calera de Tango
+comuna_rm,4,Cerrillos
+comuna_rm,5,Cerro Navia
+comuna_rm,6,Colina
+comuna_rm,7,Conchalí
+comuna_rm,8,Curacaví
+comuna_rm,9,El Bosque
+comuna_rm,10,El Monte
+comuna_rm,11,Estación Central
+comuna_rm,12,Huechuraba
+comuna_rm,13,Independencia
+comuna_rm,14,Isla de Maipo
+comuna_rm,15,La Cisterna
+comuna_rm,16,La Florida
+comuna_rm,17,La Granja
+comuna_rm,18,Lampa
+comuna_rm,19,La Pintana
+comuna_rm,20,La Reina
+comuna_rm,21,Las Condes
+comuna_rm,22,Lo Barnechea
+comuna_rm,23,Lo Espejo
+comuna_rm,24,Lo Prado
+comuna_rm,25,Macul
+comuna_rm,26,Maipú
+comuna_rm,27,María Pinto
+comuna_rm,28,Melipilla
+comuna_rm,29,Ñuñoa
+comuna_rm,30,Padre Hurtado
+comuna_rm,31,Paine
+comuna_rm,32,Pedro Aguirre Cerda
+comuna_rm,33,Peñaflor
+comuna_rm,34,Peñalolén
+comuna_rm,35,Pirque
+comuna_rm,36,Providencia
+comuna_rm,37,Pudahuel
+comuna_rm,38,Puente Alto
+comuna_rm,39,Quilicura
+comuna_rm,40,Quinta Normal
+comuna_rm,41,Recoleta
+comuna_rm,42,Renca
+comuna_rm,43,San Bernardo
+comuna_rm,44,San Joaquín
+comuna_rm,45,San José de Maipo
+comuna_rm,46,San Miguel
+comuna_rm,47,San Pedro
+comuna_rm,48,San Ramón
+comuna_rm,49,Santiago
+comuna_rm,50,Talagante
+comuna_rm,51,Tiltil
+comuna_rm,52,Vitacura
+comuna_iv,1,Andacollo
+comuna_iv,2,Canela
+comuna_iv,3,Combarbalá
+comuna_iv,4,Coquimbo
+comuna_iv,5,Illapel
+comuna_iv,6,La Higuera
+comuna_iv,7,La Serena
+comuna_iv,8,Los Vilos
+comuna_iv,9,Monte Patria
+comuna_iv,10,Ovalle
+comuna_iv,11,Paihuano
+comuna_iv,12,Punitaqui
+comuna_iv,13,Río Hurtado
+comuna_iv,14,Salamanca
+comuna_iv,15,Vicuña
+comuna_v,1,Algarrobo
+comuna_v,2,Cabildo
+comuna_v,3,Calle Larga
+comuna_v,4,Cartagena
+comuna_v,5,Casablanca
+comuna_v,6,Catemu
+comuna_v,7,Concón
+comuna_v,8,El Quisco
+comuna_v,9,El Tabo
+comuna_v,10,Hijuelas
+comuna_v,11,Isla de Pascua
+comuna_v,12,Juan Fernández
+comuna_v,13,La Calera
+comuna_v,14,La Cruz
+comuna_v,15,La Ligua
+comuna_v,16,Limache
+comuna_v,17,Llay-Llay
+comuna_v,18,Los Andes
+comuna_v,19,Nogales
+comuna_v,20,Olmué
+comuna_v,21,Panquehue
+comuna_v,22,Papudo
+comuna_v,23,Petorca
+comuna_v,24,Puchuncaví
+comuna_v,25,Putaendo
+comuna_v,26,Quillota
+comuna_v,27,Quilpué
+comuna_v,28,Quintero
+comuna_v,29,Rinconada
+comuna_v,30,San Antonio
+comuna_v,31,San Esteban
+comuna_v,32,San Felipe
+comuna_v,33,Santa María
+comuna_v,34,Santo Domingo
+comuna_v,35,Valparaíso
+comuna_v,36,Villa Alemana
+comuna_v,37,Viña del Mar
+comuna_v,38,Zapallar
+comuna_vi,1,Chépica
+comuna_vi,2,Chimbarongo
+comuna_vi,3,Codegua
+comuna_vi,4,Coínco
+comuna_vi,5,Coltauco
+comuna_vi,6,Doñihue
+comuna_vi,7,Graneros
+comuna_vi,8,La Estrella
+comuna_vi,9,Las Cabras
+comuna_vi,10,Litueche
+comuna_vi,11,Lolol
+comuna_vi,12,Machalí
+comuna_vi,13,Malloa
+comuna_vi,14,Marchihue
+comuna_vi,15,Mostazal
+comuna_vi,16,Nancagua
+comuna_vi,17,Navidad
+comuna_vi,18,Olivar
+comuna_vi,19,Palmilla
+comuna_vi,20,Paredones
+comuna_vi,21,Peumo
+comuna_vi,22,Peralillo
+comuna_vi,23,Pichidegua
+comuna_vi,24,Pichilemu
+comuna_vi,25,Placilla
+comuna_vi,26,Pumanque
+comuna_vi,27,Quinta de Tilcoco
+comuna_vi,28,Rancagua
+comuna_vi,29,Rengo
+comuna_vi,30,Requínoa
+comuna_vi,31,San Fernando
+comuna_vi,32,San Vicente de Tagua Tagua
+comuna_vi,33,Santa Cruz
+e_civil,1,Casado/a legalmente y vive con su esposa/o
+e_civil,2,Conviviente o pareja sin acuerdo de unión civil
+e_civil,3,Conviviente civil (con acuerdo de unión civil)
+e_civil,4,Viudo/a
+e_civil,5,Divorciado/a
+e_civil,6,"Separado/a (casado/a legalmente pero separado/a, no vive con su esposo/a legal)"
+e_civil,7,"Soltero, nunca se ha casado"
+e_civil,8,Otro
+likert,1,Muy en desacuerdo
+likert,2,En desacuerdo
+likert,3,De acuerdo
+likert,4,Muy de acuerdo
+atencion,1,1 – Nada
+atencion,2,2
+atencion,3,3
+atencion,4,4 – Algo
+atencion,5,5
+atencion,6,6
+atencion,7,7 - Extremadamente
+gconflict,1,Muy fuerte
+gconflict,2,Fuerte
+gconflict,3,Débil
+gconflict,4,Muy débil
+gc_commonality,1,Muy lejos
+gc_commonality,2,Lejos
+gc_commonality,3,Cerca
+gc_commonality,4,Muy cerca
+gc_discrimination,1,Mucho
+gc_discrimination,2,Algo
+gc_discrimination,3,Bastante
+gc_discrimination,4,Nada
+likert_2,1,Nada
+likert_2,2,Poco
+likert_2,3,Bastante
+likert_2,4,Mucho
+gaffect,1,1. Muy malo
+gaffect,2,2
+gaffect,3,3
+gaffect,4,4
+gaffect,5,5
+gaffect,6,6
+gaffect,7,7
+gaffect,8,8
+gaffect,9,9
+gaffect,10,10. Muy bueno
+egenero,1,Hombres mucho más
+egenero,2,Hombres bastante más
+egenero,3,Hombres un poco más
+egenero,4,Hombres y mujeres por igual
+egenero,5,Mujeres un poco más
+egenero,6,Mujeres bastante más
+egenero,7,Mujeres mucho más
+emigrante,1,Migrantes mucho más
+emigrante,2,Migrantes bastante más
+emigrante,3,Migrantes un poco más
+emigrante,4,Migrantes y chilenos/as por igual
+emigrante,5,Chilenos/as un poco más
+emigrante,6,Chilenos/as bastante más
+emigrante,7,Chilenos/as mucho más
+depe,1,Particular pagado
+depe,2,Particular subvencionado
+depe,3,Municipal
+depe,4,Servicio Local de Educación Pública
+depe,5,Otro
+contrato,1,Contrato de trabajo indefinido
+contrato,2,Contrato de trabajo a plazo fijo
+contrato,3,Contrato por honorarios
+contrato,4,No sabe
+contrato,5,Otro
+porc_migrante,1,0%
+porc_migrante,2,1-10%
+porc_migrante,3,11-40%
+porc_migrante,4,41-40%
+porc_migrante,5,61-90%
+porc_migrante,6,Más de 91%
+porc_migrante,7,No sabe
+mig_curso,1,Sí
+mig_curso,2,No
+mig_curso,3,No sabe
+religion,1,Católica
+religion,2,Evangélica
+religion,3,Testigo de Jehová
+religion,4,Judía
+religion,5,Mormona
+religion,6,Ortodoxa
+religion,7,Ateo
+religion,8,Agnóstico
+religion,9,Otra
+religion,10,Ninguna
+religion,11,Prefiero no responder
+educ,1,Sin educación formal
+educ,2,Educación básica o preparatoria incompleta
+educ,3,Educación básica o preparatoria completa
+educ,4,Educación media científico-humanista incompleta
+educ,5,Educación media científico-humanista completa
+educ,6,Humanidades incompleta -sistema antiguo-
+educ,7,Humanidades completa -sistema antiguo-
+educ,8,Educación media técnico-profesional incompleta
+educ,9,Educación media técnico-profesional completa
+educ,10,"Técnica, comercial, industrial, normalista incompleta -sistema antiguo-"
+educ,11,"Técnica, comercial, industrial, normalista completa -sistema antiguo-"
+educ,12,Técnico nivel superior incompleto -carreras de 1 a 3 años-
+educ,13,Técnico nivel superior completo -carreras de 1 a 3 años-
+educ,14,Profesional incompleto -carreras de 4 años o más-
+educ,15,Profesional completo -carreras de4 años o más-
+educ,16,"Estudios de postgrado, magister/master, doctorado"
+ingresos,1,Menos de $35.000 líquidos
+ingresos,2,Entre $35.001 y $56.000 líquidos
+ingresos,3,Entre $56.001 y $78.000 líquidos
+ingresos,4,Entre $78.001 y $101.000 líquidos
+ingresos,5,Entre $101.001 y $134.000 líquidos
+ingresos,6,Entre $134.001 y $179.000 líquidos
+ingresos,7,Entre $179.001 y $224.000 líquidos
+ingresos,8,Entre $224.001 y $291.000 líquidos
+ingresos,9,Entre $291.001 y $358.000 líquidos
+ingresos,10,Entre $358.001 y $448.000 líquidos
+ingresos,11,Entre $448.001 y $1.000.000 líquidos
+ingresos,12,Entre $1.000.001 y $2.000.000 líquidos
+ingresos,13,Entre $2.000.002 y $3.000.003 líquidos
+ingresos,14,Más de $3.000.000 líquidos
+originario,1,Alacalufe (Kawashkar)
+originario,2,Atacameño (Likan Antai)
+originario,3,Amaina
+originario,4,Colla
+originario,5,Mapuche
+originario,6,Quechua
+originario,7,Rapa Nui
+originario,8,Yamana (Yagán)
+originario,9,Diaguita
+originario,10,Otro
+originario,11,No pertenezco
+si_no,1,Sí
+si_no,2,No
