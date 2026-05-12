@@ -1,0 +1,46 @@
+project:
+  type: book
+  output-dir: docs
+
+book:
+  title: "Manual Metodológico fondecyt UV"
+  author: "Kevin Carrasco"
+  date: 05/10/2026
+  reader-mode: true
+  page-footer:
+    left: |
+      Fondecyt UV.
+
+    right: |
+      Este libro se construyó con <a href="https://quarto.org/">Quarto</a>.
+  page-navigation: true
+#  cover-image: labofam.svg
+#  favicon: labofam.svg
+  repo-url: https://github.com/kevin-carrasco/vignetas-UV
+  repo-branch: main
+  chapters:
+    - index.qmd
+    - 01-codebook.qmd
+    - 02-results.qmd
+  search:
+    location: sidebar
+    type: textbox
+  sidebar:
+    search: true
+    style: docked
+    pinned: false
+
+
+format:
+  html:
+    theme:
+      - cosmo
+      - labofam.scss
+    code-link: true
+
+editor: visual
+lang: es
+
+bibliography: "input/bib/manual-metod.bib"
+csl: "input/bib/apa6.csl"
+

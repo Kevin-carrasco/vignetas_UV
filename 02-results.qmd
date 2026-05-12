@@ -1,0 +1,83 @@
+---
+format: html
+editor: source
+---
+
+# Reporte Resultados {#results}
+
+```{r setup-chunk, include=FALSE} 
+knitr::opts_chunk$set(dev = 'png', dpi = 300, fig.width = 10, fig.height = 6,
+                      message = FALSE, warning = FALSE, echo = FALSE, cache = FALSE)
+#knitr::opts_knit$set(root.dir = "../3_output/img-cais-alas")
+options(scipen=999)
+options(knitr.kable.NA = '')
+getwd()
+```
+
+```{r load-library, include=FALSE}
+pacman::p_load(dplyr, sjlabelled, summarytools, sjmisc, readr, ggplot2, haven, writexl, lubridate)
+```
+
+```{r load-dataset, include=FALSE}
+remove(list = ls())
+
+load(file = here::here("output", "completas.RData"))
+load(file = here::here("output", "iniciadas.RData"))
+```
+
+```{r participacion, include=FALSE, eval=FALSE}
+filtros <- iniciadas %>%
+  filter(!is.na(e00_03))
+
+demograficos1 <- iniciadas %>%
+  filter(!is.na(comuna))
+
+moduloa <- iniciadas %>%
+  filter(!is.na(a10_05))
+
+modulob <- iniciadas %>%
+  filter(!is.na(b28_05))
+
+moduloc <- iniciadas %>%
+  filter(!is.na(c16_15))
+
+modulod <- iniciadas %>%
+  filter(!is.na(d11_06))
+
+demograficos2 <- iniciadas %>%
+  filter(!is.na(e25))
+
+resumen_modulos <- tibble(
+  modulo = c("Filtros", "Demográficos 1", "Módulo A", "Módulo B", "Módulo C", "Módulo D", "Demográficos 2", "Completas"),
+  n = c(
+    nrow(filtros),
+    nrow(demograficos1),
+    nrow(moduloa),
+    nrow(modulob),
+    nrow(moduloc),
+    nrow(modulod),
+    nrow(demograficos2),
+    nrow(completas)
+  )
+) %>%
+  mutate(
+    porcentaje_participacion = round(100 * n / nrow(iniciadas), 1)
+  )
+
+```
+
+## Participantes
+
+Se han iniciado `r nrow(iniciadas)` encuestas, de las cuales `r nrow(completas)` han sido completadas.
+
+## reporte
+
+```{r}
+reporte <- completas %>% dplyr::select(nombre_colegio, curso, curso2)
+
+sjmisc::frq(reporte$nombre_colegio)
+sjmisc::frq(reporte$curso)
+sjmisc::frq(reporte$curso2)
+```
+
+

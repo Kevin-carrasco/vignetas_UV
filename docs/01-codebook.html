@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.33">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>1&nbsp; Libro de códigos – Manual Metodológico fondecyt UV</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./02-results.html" rel="next">
+<link href="./index.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-457a4114a83670b0e7c6dc74f07c1ca0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "Sin resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script><link href="site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
+<script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script><link href="site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet">
+<script src="site_libs/datatables-binding-0.33/datatables.js"></script><script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><link href="site_libs/dt-core-1.13.6/css/jquery.dataTables.min.css" rel="stylesheet">
+<link href="site_libs/dt-core-1.13.6/css/jquery.dataTables.extra.css" rel="stylesheet">
+<script src="site_libs/dt-core-1.13.6/js/jquery.dataTables.min.js"></script><link href="site_libs/nouislider-7.0.10/jquery.nouislider.min.css" rel="stylesheet">
+<script src="site_libs/nouislider-7.0.10/jquery.nouislider.min.js"></script><link href="site_libs/selectize-0.12.0/selectize.bootstrap3.css" rel="stylesheet">
+<script src="site_libs/selectize-0.12.0/selectize.min.js"></script><link href="site_libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet">
+<script src="site_libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
+</head>
+<body class="nav-sidebar docked quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01-codebook.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Libro de códigos</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Manual Metodológico fondecyt UV</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/kevin-carrasco/vignetas-UV" title="Ejecutar el código" class="quarto-navigation-tool px-1" aria-label="Ejecutar el código"><i class="bi bi-github"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Alternar modo lector">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Buscar"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Presentación</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01-codebook.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Libro de códigos</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02-results.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Reporte Resultados</span></span></a>
+  </div>
+</li>
+    </ul>
+</div>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Tabla de contenidos</h2>
+   
+  <ul>
+<li><a href="#instrucciones" id="toc-instrucciones" class="nav-link active" data-scroll-target="#instrucciones"><span class="header-section-number">1.1</span> Instrucciones</a></li>
+  <li><a href="#libro-de-c%C3%B3digos" id="toc-libro-de-códigos" class="nav-link" data-scroll-target="#libro-de-c%C3%B3digos"><span class="header-section-number">1.2</span> Libro de códigos</a></li>
+  </ul></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
+<h1 class="title"><span id="codebook" class="quarto-section-identifier"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Libro de códigos</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header><section id="instrucciones" class="level2" data-number="1.1"><h2 data-number="1.1" class="anchored" data-anchor-id="instrucciones">
+<span class="header-section-number">1.1</span> Instrucciones</h2>
+<p>El Libro de Códigos que se presentan en la siguiente sección corresponden a una herramienta interactiva que busca presentar de manera eficiente información respecto a las variables que componen la base de datos.</p>
+<p>El libro muestra el código de cada variable, la etiqueta asociada a la variable con la redacción del ítem, y las categorías de respuesta y códigos asociados. Estas corresponden a tres columnas del libro de códigos denominadas <strong><em>name, label</em></strong> y <strong><em>value_label</em></strong>, respectivamente.</p>
+<p>Se puede hacer uso del buscador que se encuentra al principio del libro para encontrar información de manera más rápida. También se pueden usar los buscadores por cada columna, los cuales irán filtrando los datos que contengan el término de búsqueda.</p>
+<p>Incluimos etiquetas de variables en el Libro de Códigos, pero no en las bases de datos. El equipo de investigación las diseñó con la intención de describir brevemente el fenómeno o dimensión a medir. La redacción de la pregunta sigue a las etiquetas, incluyendo códigos y categorías de respuesta. En la construcción de la base de datos, ingresamos solo los códigos de respuesta como valores numéricos.</p>
+<p>En la columna <strong><em>value_labels</em></strong> se muestran las categorías de respuesta de cada variable. No obstante, si la variable es numérica o de respuesta abierta (texto), la casilla se mostrará en blanco, ya que no hay ninguna categoría que mostrar. También puede ocurrir el caso que la variable sea numérica, pero tenga disponibles las categorías “88. No Sabe” y “99. No Responde”. En estos casos sólo se visualizarán ambas categorías en el libro de código.</p>
+</section><section id="libro-de-códigos" class="level2" data-number="1.2"><h2 data-number="1.2" class="anchored" data-anchor-id="libro-de-códigos">
+<span class="header-section-number">1.2</span> Libro de códigos</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div class="datatables html-widget html-fill-item" id="htmlwidget-84e7959e085b748c350a" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-84e7959e085b748c350a">{"x":{"filter":"top","vertical":false,"filterHTML":"<tr>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","caption":"<caption>df  columns and labels<\/caption>","data":[["start_01","curso","region","comuna_colegio_v","comuna_colegio_rm","region_persona","genero","genero_esp","sexo","sexo_esp","edad","e_civil","e_civil_esp","est_a1a","atencion_vinetas1_a1a","atencion_vinetas2_a1a","out_a1a","out_a2a","out_a3a","out_a4a","out_a5a","out_a6a","out_a7a","desempeno_vinetas_mat_a1a","desempeno_vinetas_len_a1a","educ_vineta_a1a","educ2_vineta_a1a","est_a1b","atencion_vinetas1_a1b","atencion_vinetas2_a1b","out_a1b","out_a2b","out_a3b","out_a4b","out_a5b","out_a6b","out_a7b","desempeno_vinetas_mat_a1b","desempeno_vinetas_len_a1b","educ_vineta_a1b","educ2_vineta_a1b","est_a1c","atencion_vinetas1_a1c","atencion_vinetas2_a1c","out_a1c","out_a2c","out_a3c","out_a4c","out_a5c","out_a6c","out_a7c","desempeno_vinetas_mat_a1c","desempeno_vinetas_len_a1c","educ_vineta_a1c","educ2_vineta_a1c","est_a1d","atencion_vinetas1_a1d","atencion_vinetas2_a1d","out_a1d","out_a2d","out_a3d","out_a4d","out_a5d","out_a6d","out_a7d","desempeno_vinetas_mat_a1d","desempeno_vinetas_len_a1d","educ_vineta_a1d","educ2_vineta_a1d","est_a1e","atencion_vinetas1_a1e","atencion_vinetas2_a1e","out_a1e","out_a2e","out_a3e","out_a4e","out_a5e","out_a6e","out_a7e","desempeno_vinetas_mat_a1e","desempeno_vinetas_len_a1e","educ_vineta_a1e","educ2_vineta_a1e","est_a1f","atencion_vinetas1_a1f","atencion_vinetas2_a1f","out_a1f","out_a2f","out_a3f","out_a4f","out_a5f","out_a6f","out_a7f","desempeno_vinetas_mat_a1f","desempeno_vinetas_len_a1f","educ_vineta_a1f","educ2_vineta_a1f","est_b1a","atencion_vinetas1_b1a","atencion_vinetas2_b1a","out_b1a","out_b2a","out_b3a","out_b4a","out_b5a","out_b6a","out_b7a","desempeno_vinetas_mat_b1a","desempeno_vinetas_len_b1a","educ_vineta_b1a","educ2_vineta_b1a","est_b1b","atencion_vinetas1_b1b","atencion_vinetas2_b1b","out_b1b","out_b2b","out_b3b","out_b4b","out_b5b","out_b6b","out_b7b","desempeno_vinetas_mat_b1b","desempeno_vinetas_len_b1b","educ_vineta_b1b","educ2_vineta_b1b","est_b1c","atencion_vinetas1_b1c","atencion_vinetas2_b1c","out_b1c","out_b2c","out_b3c","out_b4c","out_b5c","out_b6c","out_b7c","desempeno_vinetas_mat_b1c","desempeno_vinetas_len_b1c","educ_vineta_b1c","educ2_vineta_b1c","est_b1d","atencion_vinetas1_b1d","atencion_vinetas2_b1d","out_b1d","out_b2d","out_b3d","out_b4d","out_b5d","out_b6d","out_b7d","desempeno_vinetas_mat_b1d","desempeno_vinetas_len_b1d","educ_vineta_b1d","educ2_vineta_b1d","est_b1e","atencion_vinetas1_b1e","atencion_vinetas2_b1e","out_b1e","out_b2e","out_b3e","out_b4e","out_b5e","out_b6e","out_b7e","desempeno_vinetas_mat_b1e","desempeno_vinetas_len_b1e","educ_vineta_b1e","educ2_vineta_b1e","est_b1f","atencion_vinetas1_b1f","atencion_vinetas2_b1f","out_b1f","out_b2f","out_b3f","out_b4f","out_b5f","out_b6f","out_b7f","desempeno_vinetas_mat_b1f","desempeno_vinetas_len_b1f","educ_vineta_b1f","educ2_vineta_b1f","atencion1","gconflict","gconflict_01","gconflict_02","gconflict_03","gconflict_04","gconflict_05","gconflict_06","gconflict_07","gconflict_08","gconflict_09","gc_commonality","gc_commonality_01","gc_commonality_02","gc_commonality_03","gc_commonality_04","gc_commonality_05","gc_commonality_06","gc_commonality_07","gc_commonality_08","gc_commonality_09","gc_collectiva","gc_discrimination","gc_discrimination_01","gc_discrimination_02","gc_discrimination_03","gc_discrimination_04","gc_discrimination_05","gc_discrimination_06","gc_discrimination_07","gc_discrimination_08","gc_discrimination_09","lfate_migrante","lfate_minorias","gaffect","gaffect_01","gaffect_02","gaffect_03","gaffect_04","gaffect_05","gaffect_06","gaffect_07","gaffect_08","gaffect_09","egenero","egenero_01","egenero_02","egenero_03","egenero_04","egenero_05","egenero_06","egenero_07","egenero_08","egenero_09","egenero_10","egenero_11","emigrante","emigrante_01","emigrante_02","emigrante_03","emigrante_04","emigrante_05","emigrante_06","emigrante_07","emigrante_08","emigrante_09","emigrante_10","emigrante_11","atencion2","depe","depe_esp","exp_colegio","exp_sistema","contrato","horario","porc_migrante","mig_curso","mig_curso_01","mig_curso_02","mig_curso_03","mig_curso_04","mig_curso_05","mig_curso_06","mig_curso_07","mig_curso_08","mig_curso_09","exp_estudiantes","religion","educ","ingresos","originario","originario_esp","nacionalidad","nacionalidad_esp","genero_imp","genero_imp_01","genero_imp_02","masculina","femenina","correo"],["### Declaración de consentimiento informado\n\nAl aceptar participar usted declara que lo hace de forma informada, es decir, que ha leído y comprendido las condiciones de su participación en este estudio en los términos antes señalados, y ha tenido la oportunidad de hacer preguntas y que estas han sido respondidas adecuadamente, sin que le queden dudas al respecto. \n\nSi acepta participar en este estudio, por favor marque la celda que indica que acepta participar voluntariamente.","¿En cuál de los siguientes niveles enseña usted? Marque todas las opciones que correspondan.","¿En qué región se ubica el establecimiento educacional?","¿En qué comuna se encuentra este colegio?","¿En qué comuna se encuentra este colegio?","¿En qué región vive usted?","¿Con qué género se identifica?","Especifique","¿Cuál es su sexo?","Especifique","¿Cuál es su edad en años?","¿Cuál es su estado civil o conyugal actual?","Especifique","**Lucas** es **un niño Chileno** y forma parte de tu curso. En clases, **él** suele quedarse mirando por la ventana durante largos períodos. Aunque participa levantando la mano, con frecuencia olvida la respuesta cuando se le da la palabra. Es probable que repruebe la asignatura de matemáticas. A **él** le cuesta concentrarse e interrumpe con frecuencia el desarrollo de la clase. **Lucas** realiza sus tareas de manera descuidada y con frecuencia no las entrega. Además, presenta dificultades para integrarse en la comunidad escolar. Su desempeño en lenguaje es uno de los más bajos de su curso.","¿De qué nacionalidad es este estudiante?","¿Cuál es el sexo de este estudiante?","Creo que Lucas obtendrá muy buenas notas en la escuela este año.","Creo que Lucas es inteligente.","Creo que Lucas será uno de los mejores estudiantes de su curso este año.","Lucas podría beneficiarse de clases de reforzamiento en matemáticas.","Lucas podría beneficiarse de trabajar con un/a compañero/a en matemáticas.","Lucas podría beneficiarse de clases de reforzamiento en lenguaje.","Lucas podría beneficiarse de trabajar con un/a compañero/a en lenguaje.","¿Cómo evaluaría el rendimiento de Lucas en matemáticas?","¿Cómo evaluaría el rendimiento de Lucas en lenguaje?","Pensando en el mismo estudiante, ¿cuál cree que será el nivel educativo más alto que llegará a alcanzar?","¿Crees que Lucas logrará estudiar lo que quiere?","**Sofía** es **una niña Chilena** y forma parte de tu curso. En clases, **ella** suele quedarse mirando por la ventana durante largos períodos. Aunque participa levantando la mano, con frecuencia olvida la respuesta cuando se le da la palabra. Es probable que repruebe la asignatura de matemáticas. A **ella** le cuesta concentrarse e interrumpe con frecuencia el desarrollo de la clase. **Sofía** realiza sus tareas de manera descuidada y con frecuencia no las entrega. Además, presenta dificultades para integrarse en la comunidad escolar. Su desempeño en lenguaje es uno de los más bajos de su curso.","¿De qué nacionalidad es esta estudiante?","¿Cuál es el sexo de esta estudiante?","Creo que Sofía obtendrá muy buenas notas en la escuela este año.","Creo que Sofía es inteligente.","Creo que Sofía será una de las mejores estudiantes de su curso este año.","Sofía podría beneficiarse de clases de reforzamiento en matemáticas.","Sofía podría beneficiarse de trabajar con un/a compañero/a en matemáticas.","Sofía podría beneficiarse de clases de reforzamiento en lenguaje.","Sofía podría beneficiarse de trabajar con un/a compañero/a en lenguaje.","¿Cómo evaluaría el rendimiento de Sofía en matemáticas?","¿Cómo evaluaría el rendimiento de Sofía en lenguaje?","Pensando en la misma estudiante, ¿cuál cree que será el nivel educativo más alto que llegará a alcanzar?","¿Crees que Sofía logrará estudiar lo que quiere?","**Stevenson** es **un niño Haitiano** y forma parte de tu curso. En clases, **él** suele quedarse mirando por la ventana durante largos períodos. Aunque participa levantando la mano, con frecuencia olvida la respuesta cuando se le da la palabra. Es probable que repruebe la asignatura de matemáticas. A **él** le cuesta concentrarse e interrumpe con frecuencia el desarrollo de la clase. **Stevenson** realiza sus tareas de manera descuidada y con frecuencia no las entrega. Además, presenta dificultades para integrarse en la comunidad escolar. Su desempeño en lenguaje es uno de los más bajos de su curso.","¿De qué nacionalidad es este estudiante?","¿Cuál es el sexo de este estudiante?","Creo que Stevenson obtendrá muy buenas notas en la escuela este año.","Creo que Stevenson es inteligente.","Creo que Stevenson será uno de los mejores estudiantes de su curso este año.","Stevenson podría beneficiarse de clases de reforzamiento en matemáticas.","Stevenson podría beneficiarse de trabajar con un/a compañero/a en matemáticas.","Stevenson podría beneficiarse de clases de reforzamiento en lenguaje.","Stevenson podría beneficiarse de trabajar con un/a compañero/a en lenguaje.","¿Cómo evaluaría el rendimiento de Stevenson en matemáticas?","¿Cómo evaluaría el rendimiento de Stevenson en lenguaje?","Pensando en el mismo estudiante, ¿cuál cree que será el nivel educativo más alto que llegará a alcanzar?","¿Crees que Stevenson logrará estudiar lo que quiere?","**Widelene** es **una niña Haitiana** y forma parte de tu curso. En clases, **ella** suele quedarse mirando por la ventana durante largos períodos. Aunque participa levantando la mano, con frecuencia olvida la respuesta cuando se le da la palabra. Es probable que repruebe la asignatura de matemáticas. A **ella** le cuesta concentrarse e interrumpe con frecuencia el desarrollo de la clase. **Widelene** realiza sus tareas de manera descuidada y con frecuencia no las entrega. Además, presenta dificultades para integrarse en la comunidad escolar. Su desempeño en lenguaje es uno de los más bajos de su curso.","¿De qué nacionalidad es esta estudiante?","¿Cuál es el sexo de esta estudiante?","Creo que Widelene obtendrá muy buenas notas en la escuela este año.","Creo que Widelene es inteligente.","Creo que Widelene será una de las mejores estudiantes de su curso este año.","Widelene podría beneficiarse de clases de reforzamiento en matemáticas.","Widelene podría beneficiarse de trabajar con un/a compañero/a en matemáticas.","Widelene podría beneficiarse de clases de reforzamiento en lenguaje.","Widelene podría beneficiarse de trabajar con un/a compañero/a en lenguaje.","¿Cómo evaluaría el rendimiento de Widelene en matemáticas?","¿Cómo evaluaría el rendimiento de Widelene en lenguaje?","Pensando en la misma estudiante, ¿cuál cree que será el nivel educativo más alto que llegará a alcanzar?","¿Crees que Widelene logrará estudiar lo que quiere?","**Yi-Jun** es **un niño Sur-Coreano** y forma parte de tu curso. En clases, **él** suele quedarse mirando por la ventana durante largos períodos. Aunque participa levantando la mano, con frecuencia olvida la respuesta cuando se le da la palabra. Es probable que repruebe la asignatura de matemáticas. A **él** le cuesta concentrarse e interrumpe con frecuencia el desarrollo de la clase. **Yi-Jun** realiza sus tareas de manera descuidada y con frecuencia no las entrega. Además, presenta dificultades para integrarse en la comunidad escolar. Su desempeño en lenguaje es uno de los más bajos de su curso.","¿De qué nacionalidad es este estudiante?","¿Cuál es el sexo de este estudiante?","Creo que Yi-Jun tendrá muy buenas notas en la escuela este año.","Creo que Yi-Jun es inteligente.","Creo que Yi-Jun será uno de los mejores estudiantes de su curso este año.","Yi-Jun podría beneficiarse de clases de reforzamiento en matemáticas.","Yi-Jun podría beneficiarse de trabajar con un/a compañero/a en matemáticas.","Yi-Jun podría beneficiarse de clases de reforzamiento en lenguaje.","Yi-Jun podría beneficiarse de trabajar con un/a compañero/a en lenguaje.","¿Cómo evaluaría el rendimiento de Yi-Jun en matemáticas?","¿Cómo evaluaría el rendimiento de Yi-Jun en lenguaje?","Pensando en el mismo estudiante, ¿cuál cree que será el nivel educativo más alto que llegará a alcanzar?","¿Crees que Yi-Jun logrará estudiar lo que quiere?","**Yi-Seo** es **una niña Sur-Coreana** y forma parte de tu curso. En clases, **ella** suele quedarse mirando por la ventana durante largos períodos. Aunque participa levantando la mano, con frecuencia olvida la respuesta cuando se le da la palabra. Es probable que repruebe la asignatura de matemáticas. A **ella** le cuesta concentrarse e interrumpe con frecuencia el desarrollo de la clase. **Yi-Seo** realiza sus tareas de manera descuidada y con frecuencia no las entrega. Además, presenta dificultades para integrarse en la comunidad escolar. Su desempeño en lenguaje es uno de los más bajos de su curso.","¿De qué nacionalidad es esta estudiante?","¿Cuál es el sexo de esta estudiante?","Creo que Yi-Seo obtendrá muy buenas notas en la escuela este año.","Creo que Yi-Seo es inteligente.","Creo que Yi-Seo será una de las mejores estudiantes de su curso este año.","Yi-Seo podría beneficiarse de clases de reforzamiento en matemáticas.","Yi-Seo podría beneficiarse de trabajar con un/a compañero/a en matemáticas.","Yi-Seo podría beneficiarse de clases de reforzamiento en lenguaje.","Yi-Seo podría beneficiarse de trabajar con un/a compañero/a en lenguaje.","¿Cómo evaluaría el rendimiento de Yi-Seo en matemáticas?","¿Cómo evaluaría el rendimiento de Yi-Seo en lenguaje?","Pensando en la misma estudiante, ¿cuál cree que será el nivel educativo más alto que llegará a alcanzar?","¿Crees que Yi-Seo logrará estudiar lo que quiere?","**Lucas** es **un niño Chileno** y forma parte de tu curso. En clases, **él** se mantiene atento al desarrollo de las actividades. Participa activamente levantando la mano y suele dar respuestas claras y bien fundamentadas. Es probable que sea el mejor de su curso en matemáticas. A **él** le es fácil concentrarse y contribuye al desarrollo de la clase con preguntas y comentarios. **Lucas** entrega puntualmente sus tareas, cuidando la presentación y el contenido. Además, se integra fácilmente en la comunidad escolar. Su desempeño en lenguaje es uno de los más altos de su curso.","¿De qué nacionalidad es este estudiante?","¿Cuál es el sexo de este estudiante?","Creo que Lucas obtendrá muy buenas notas en la escuela este año.","Creo que Lucas es inteligente.","Creo que Lucas será uno de los mejores estudiantes de su curso este año.","Lucas podría beneficiarse de clases de reforzamiento en matemáticas.","Lucas podría beneficiarse de trabajar con un/a compañero/a en matemáticas.","Lucas podría beneficiarse de clases de reforzamiento en lenguaje.","Lucas podría beneficiarse de trabajar con un/a compañero/a en lenguaje.","¿Cómo evaluaría el rendimiento de Lucas en matemáticas?","¿Cómo evaluaría el rendimiento de Lucas en lenguaje?","Pensando en el mismo estudiante, ¿cuál cree que será el nivel educativo más alto que llegará a alcanzar?","¿Crees que Lucas logrará estudiar lo que quiere?","**Sofía** es **una niña Chilena** y forma parte de tu curso. En clases, **ella** se mantiene atenta al desarrollo de las actividades. Participa activamente levantando la mano y suele dar respuestas claras y bien fundamentadas. Es probable que sea la mejor de su curso en matemáticas. A **ella** le es fácil concentrarse y contribuye al desarrollo de la clase con preguntas y comentarios. **Sofía** entrega puntualmente sus tareas, cuidando la presentación y el contenido. Además, se integra fácilmente en la comunidad escolar. Su desempeño en lenguaje es uno de los más altos de su curso.","¿De qué nacionalidad es esta estudiante?","¿Cuál es el sexo de esta estudiante?","Creo que Sofía obtendrá muy buenas notas en la escuela este año.","Creo que Sofía es inteligente.","Creo que Sofía será una de las mejores estudiantes de su curso este año.","Sofía podría beneficiarse de clases de reforzamiento en matemáticas.","Sofía podría beneficiarse de trabajar con un/a compañero/a en matemáticas.","Sofía podría beneficiarse de clases de reforzamiento en lenguaje.","Sofía podría beneficiarse de trabajar con un/a compañero/a en lenguaje.","¿Cómo evaluaría el rendimiento de Sofía en matemáticas?","¿Cómo evaluaría el rendimiento de Sofía en lenguaje?","Pensando en la misma estudiante, ¿cuál cree que será el nivel educativo más alto que llegará a alcanzar?","¿Crees que Sofía logrará estudiar lo que quiere?","**Stevenson** es **un niño Haitiano** y forma parte de tu curso. En clases, **él** se mantiene atento al desarrollo de las actividades. Participa activamente levantando la mano y suele dar respuestas claras y bien fundamentadas. Es probable que sea el mejor de su curso en matemáticas. A **él** le es fácil concentrarse y contribuye al desarrollo de la clase con preguntas y comentarios. **Stevenson** entrega puntualmente sus tareas, cuidando la presentación y el contenido. Además, se integra fácilmente en la comunidad escolar. Su desempeño en lenguaje es uno de los más altos de su curso.","¿De qué nacionalidad es este estudiante?","¿Cuál es el sexo de este estudiante?","Creo que Stevenson obtendrá muy buenas notas en la escuela este año.","Creo que Stevenson es inteligente.","Creo que Stevenson será uno de los mejores estudiantes de su curso este año.","Stevenson podría beneficiarse de clases de reforzamiento en matemáticas.","Stevenson podría beneficiarse de trabajar con un/a compañero/a en matemáticas.","Stevenson podría beneficiarse de clases de reforzamiento en lenguaje.","Stevenson podría beneficiarse de trabajar con un/a compañero/a en lenguaje.","¿Cómo evaluaría el rendimiento de Stevenson en matemáticas?","¿Cómo evaluaría el rendimiento de Stevenson en lenguaje?","Pensando en el mismo estudiante, ¿cuál cree que será el nivel educativo más alto que llegará a alcanzar?","¿Crees que Stevenson logrará estudiar lo que quiere?","**Widelene** es ** una niña Haitiana** y forma parte de tu curso. En clases, **ella** se mantiene atenta al desarrollo de las actividades. Participa activamente levantando la mano y suele dar respuestas claras y bien fundamentadas. Es probable que sea la mejor de su curso en matemáticas. A **ella** le es fácil concentrarse y contribuye al desarrollo de la clase con preguntas y comentarios. **Widelene** entrega puntualmente sus tareas, cuidando la presentación y el contenido. Además, se integra fácilmente en la comunidad escolar. Su desempeño en lenguaje es uno de los más altos de su curso.","¿De qué nacionalidad es esta estudiante?","¿Cuál es el sexo de esta estudiante?","Creo que Widelene obtendrá muy buenas notas en la escuela este año.","Creo que Widelene es inteligente.","Creo que Widelene será una de las mejores estudiantes de su curso este año.","Widelene podría beneficiarse de clases de reforzamiento en matemáticas.","Widelene podría beneficiarse de trabajar con un/a compañero/a en matemáticas.","Widelene podría beneficiarse de clases de reforzamiento en lenguaje.","Widelene podría beneficiarse de trabajar con un/a compañero/a en lenguaje.","¿Cómo evaluaría el rendimiento de Widelene en matemáticas?","¿Cómo evaluaría el rendimiento de Widelene en lenguaje?","Pensando en la misma estudiante, ¿cuál cree que será el nivel educativo más alto que llegará a alcanzar?","¿Crees que Widelene logrará estudiar lo que quiere?","**Yi-Jun** es **un niño Sur-coreano** y forma parte de tu curso. En clases, **él** se mantiene atento al desarrollo de las actividades. Participa activamente levantando la mano y suele dar respuestas claras y bien fundamentadas. Es probable que sea el mejor de su curso en matemáticas. A **él** le es fácil concentrarse y contribuye al desarrollo de la clase con preguntas y comentarios. **Yi-Jun** entrega puntualmente sus tareas, cuidando la presentación y el contenido. Además, se integra fácilmente en la comunidad escolar. Su desempeño en lenguaje es uno de los más altos de su curso.","¿De qué nacionalidad es este estudiante?","¿Cuál es el sexo de este estudiante?","Creo que Yi-Jun obtendrá muy buenas notas en la escuela este año.","Creo que Yi-Jun es inteligente.","Creo que Yi-Jun será uno de los mejores estudiantes de su curso este año.","Yi-Jun podría beneficiarse de clases de reforzamiento en matemáticas.","Yi-Jun podría beneficiarse de trabajar con un/a compañero/a en matemáticas.","Yi-Jun podría beneficiarse de clases de reforzamiento en lenguaje.","Yi-Jun podría beneficiarse de trabajar con un/a compañero/a en lenguaje.","¿Cómo evaluaría el rendimiento de Yi-Jun en matemáticas?","¿Cómo evaluaría el rendimiento de Yi-Jun en lenguaje?","Pensando en el mismo estudiante, ¿cuál cree que será el nivel educativo más alto que llegará a alcanzar?","¿Crees que Yi-Jun logrará estudiar lo que quiere?","**Yi-Seo** es **una niña Sur-coreana** y forma parte de tu curso. En clases, **ella** se mantiene atenta al desarrollo de las actividades. Participa activamente levantando la mano y suele dar respuestas claras y bien fundamentadas. Es probable que sea la mejor de su curso en matemáticas. A **ella** le es fácil concentrarse y contribuye al desarrollo de la clase con preguntas y comentarios. **Yi-Seo** entrega puntualmente sus tareas, cuidando la presentación y el contenido. Además, se integra fácilmente en la comunidad escolar. Su desempeño en lenguaje es uno de los más altos de su curso.","¿De qué nacionalidad es esta estudiante?","¿Cuál es el sexo de esta estudiante?","Creo que Yi-Seo obtendrá muy buenas notas en la escuela este año.","Creo que Yi-Seo es inteligente.","Creo que Yi-Seo será una de las mejores estudiantes de su curso este año.","Yi-Seo podría beneficiarse de clases de reforzamiento en matemáticas.","Yi-Seo podría beneficiarse de trabajar con un/a compañero/a en matemáticas.","Yi-Seo podría beneficiarse de clases de reforzamiento en lenguaje.","Yi-Seo podría beneficiarse de trabajar con un/a compañero/a en lenguaje.","¿Cómo evaluaría el rendimiento de Yi-Seo en matemáticas?","¿Cómo evaluaría el rendimiento de Yi-Seo en lenguaje?","Pensando en la misma estudiante, ¿cuál cree que será el nivel educativo más alto que llegará a alcanzar?","¿Crees que Yi-Seo logrará estudiar lo que quiere?","Si está prestando atención a las instrucciones de esta encuesta, por favor seleccione el valor 5 en las opciones de respuesta de este ítem.","En cada país hay diferencias entre grupos sociales. ¿En su opinión, qué tan fuerte es el conflicto entre...","Personas de diferentes razas","Chilenos/as e inmigrantes","Chilenos/as y venezolanos/as","Chilenos/as y peruanos/as","Chilenos/as y haitianos/as","Chilenos/as y bolivianos/as","Chilenos/as y colombianos/as","Chilenos/as y europeos/as","Chilenos/as y asiáticos/as","¿Qué tan cerca se siente de cada uno de los siguientes grupos de personas respecto a sus ideas, intereses y sentimientos? Considere una escala que va desde “Muy lejos” a “Muy cerca”.","Chilenos/as","Inmigrantes","Venezolanos/as","Peruanos/as","Haitianos/as","Bolivianos/as","Colombianos/as","Europeos/as","Asiáticos/as","¿Cuán de acuerdo está con la siguiente afirmación?: Es importante que las personas trabajen juntas para mejorar la posición de su grupo racial o étnico.","¿Cuánta discriminación o trato injusto cree que enfrentan los diferentes grupos en el país?","Chilenos/as","Inmigrantes","Venezolanos/as","Peruanos/as","Haitianos/as","Bolivianos/as","Colombianos/as","Europeos/as","Asiáticos/as","¿Considera que lo que sucede generalmente con los/as inmigrantes en este país tiene algo que ver con lo que sucede en su vida personal?","¿Considera que lo que sucede generalmente con las minorías raciales y étnicas en este país tiene algo que ver con lo que sucede en su vida personal?","En una escala de 1 (\"muy malo\") al 10 (\"muy bueno\"), cuáles son sus sentimientos hacia los siguientes grupos sociales.","Chilenos/as","Inmigrantes","Venezolanos/as","Peruanos/as","Haitianos/as","Bolivianos/as","Colombianos/as","Europeos/as","Asiáticos/as","Comparando a estudiantes hombres y mujeres, a quiénes en tu opinión:","Les va bien en matemáticas","Les cuesta comprender matemáticas","Tienen talento para las matemáticas","Les gustan las matemáticas","Comprenden fácilmente las ideas matemáticas","Obtienen mejores notas en matemáticas","Se suelen equivocar en tareas relacionadas con matemáticas","Necesitan ayuda para comprender las ideas matemáticas","Deben esforzarse para que les vaya bien en matemáticas","Encuentran difícil las matemáticas","Tienen facilidad para comprender matemáticas","Comparando a estudiantes migrantes latinoamericanos/as y chilenos/as, a quiénes en tu opinión:","Les va bien en matemáticas","Les cuesta comprender matemáticas","Tienen talento para las matemáticas","Les gustan las matemáticas","Comprenden fácilmente las ideas matemáticas","Obtienen mejores notas en matemáticas","Se suelen equivocar en tareas relacionadas con matemáticas","Necesitan ayuda para comprender las ideas matemáticas","Deben esforzarse para que les vaya bien en matemáticas","Encuentran difícil las matemáticas","Tienen facilidad para comprender matemáticas","Nos gustaría tener un sentido general de sus preferencias.\nTeorías modernas sobre la toma de decisiones reconocen que las decisiones no ocurren en el vacío. Las preferencias individuales y el conocimiento pueden afectar significativamente el proceso de toma de decisiones. Para demostrar que usted ha leído este texto, le pedimos que para la siguiente pregunta seleccione “rojo” y “verde”, sin tomar en cuenta cuál es su color favorito. Sí, ignore la siguiente pregunta y seleccione solo “rojo” y “verde”. \n¿Cuál es tu color favorito?","¿Qué tipo de dependencia tiene este colegio?","Especifique","¿Cuántos años lleva trabajando en este colegio?","¿Cuántos años lleva trabajando como docente? Considere toda su trayectoria profesional.","¿Qué tipo de contrato tiene en este establecimiento?","¿Cuántas horas a la semana trabaja en este colegio?","Aproximadamente, ¿qué porcentaje de estudiantes migrantes tiene en sus cursos de este colegio?","¿Tiene estudiantes de los siguientes grupos en sus cursos de este colegio?","Chilenos/as","Inmigrantes","Venezolanos/as","Peruanos/as","Haitianos/as","Bolivianos/as","Colombianos/as","Europeos/as","Asiáticos/as","Pensando en el futuro, ¿cuál cree usted que es el nivel educacional más alto que completará la mayoría de sus estudiantes en este colegio?","¿Podría ud. decirme la religión o iglesia a la que pertenece o se siente más cercano?","¿Cuál es su mayor nivel educacional alcanzado?","Siguiendo las siguientes categorías de ingresos, ¿podría indicar cuál es el ingreso mensual aproximado de su hogar, considerando todos los ingresos líquidos por sueldo, jubilación o pensión (si la tuvieran), aportes de parientes o amigos, arriendos y otros?","¿Pertenece Ud. a alguno de los siguientes pueblos originarios o indígenas?","Especifique","¿Cuál es su nacionalidad?","Especifique","Pensando en usted mismo/a, indique su grado de acuerdo con las siguientes afirmaciones:","Ser femenino/a es muy importante para mí","Ser masculino/a es muy importante para mí","En una escala entre 0 y 10, en donde 0 es una persona nada masculina y 10 es una persona muy masculina, ¿en qué punto de la escala se ubicaría usted?","En una escala entre 0 y 10, en donde 0 es una persona nada femenina y 10 es una persona muy femenina, ¿en qué punto de la escala se ubicaría usted?","En el caso que quiera participar en el sorteo de libros por participar en este estudio, por favor indique su correo electrónico."],["1. Sí, acepto voluntariamente participar en este estudio.,<br>2. No acepto participar en este estudio.","1. Primero básico,<br>2. Segundo básico,<br>3. Tercero básico,<br>4. Otro","1. Arica y Parinacota,<br>2. Tarapacá,<br>3. Antofagasta,<br>4. Atacama,<br>5. Coquimbo,<br>6. Valparaíso,<br>7. Región Metropolitana de Santiago,<br>8. Libertador General Bernardo O’Higgins,<br>9. Maule,<br>10. Ñuble,<br>11. Biobío,<br>12. La Araucanía,<br>13. Los Ríos,<br>14. Los Lagos,<br>15. Aysén del General Carlos Ibáñez del Campo,<br>16. Magallanes y de la Antártica Chilena","1. Algarrobo,<br>2. Cabildo,<br>3. Calle Larga,<br>4. Cartagena,<br>5. Casablanca,<br>6. Catemu,<br>7. Concón,<br>8. El Quisco,<br>9. El Tabo,<br>10. Hijuelas,<br>11. Isla de Pascua,<br>12. Juan Fernández,<br>13. La Calera,<br>14. La Cruz,<br>15. La Ligua,<br>16. Limache,<br>17. Llay-Llay,<br>18. Los Andes,<br>19. Nogales,<br>20. Olmué,<br>21. Panquehue,<br>22. Papudo,<br>23. Petorca,<br>24. Puchuncaví,<br>25. Putaendo,<br>26. Quillota,<br>27. Quilpué,<br>28. Quintero,<br>29. Rinconada,<br>30. San Antonio,<br>31. San Esteban,<br>32. San Felipe,<br>33. Santa María,<br>34. Santo Domingo,<br>35. Valparaíso,<br>36. Villa Alemana,<br>37. Viña del Mar,<br>38. Zapallar","1. Alhué,<br>2. Buin,<br>3. Calera de Tango,<br>4. Cerrillos,<br>5. Cerro Navia,<br>6. Colina,<br>7. Conchalí,<br>8. Curacaví,<br>9. El Bosque,<br>10. El Monte,<br>11. Estación Central,<br>12. Huechuraba,<br>13. Independencia,<br>14. Isla de Maipo,<br>15. La Cisterna,<br>16. La Florida,<br>17. La Granja,<br>18. Lampa,<br>19. La Pintana,<br>20. La Reina,<br>21. Las Condes,<br>22. Lo Barnechea,<br>23. Lo Espejo,<br>24. Lo Prado,<br>25. Macul,<br>26. Maipú,<br>27. María Pinto,<br>28. Melipilla,<br>29. Ñuñoa,<br>30. Padre Hurtado,<br>31. Paine,<br>32. Pedro Aguirre Cerda,<br>33. Peñaflor,<br>34. Peñalolén,<br>35. Pirque,<br>36. Providencia,<br>37. Pudahuel,<br>38. Puente Alto,<br>39. Quilicura,<br>40. Quinta Normal,<br>41. Recoleta,<br>42. Renca,<br>43. San Bernardo,<br>44. San Joaquín,<br>45. San José de Maipo,<br>46. San Miguel,<br>47. San Pedro,<br>48. San Ramón,<br>49. Santiago,<br>50. Talagante,<br>51. Tiltil,<br>52. Vitacura","1. Arica y Parinacota,<br>2. Tarapacá,<br>3. Antofagasta,<br>4. Atacama,<br>5. Coquimbo,<br>6. Valparaíso,<br>7. Región Metropolitana de Santiago,<br>8. Libertador General Bernardo O’Higgins,<br>9. Maule,<br>10. Ñuble,<br>11. Biobío,<br>12. La Araucanía,<br>13. Los Ríos,<br>14. Los Lagos,<br>15. Aysén del General Carlos Ibáñez del Campo,<br>16. Magallanes y de la Antártica Chilena","1. Masculino,<br>2. Femenino,<br>3. Transmasculino,<br>4. Transfemenino,<br>5. No binario,<br>6. Otro género,<br>7. Prefiero no responder",null,"1. Hombre,<br>2. Mujer,<br>3. Otro,<br>4. Prefiero no responder",null,null,"1. Casado/a legalmente y vive con su esposa/o,<br>2. Conviviente o pareja sin acuerdo de unión civil,<br>3. Conviviente civil (con acuerdo de unión civil),<br>4. Viudo/a,<br>5. Divorciado/a,<br>6. Separado/a (casado/a legalmente pero separado/a, no vive con su esposo/a legal),<br>7. Soltero, nunca se ha casado,<br>8. Otro",null,null,"1. Chilena,<br>2. Haitiana,<br>3. Sur-coreana,<br>4. Otra","1. Mujer,<br>2. Hombre","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy bajo,<br>2. Muy alto","1. Muy bajo,<br>2. Muy alto","1. Educación básica incompleta,<br>2. Educación básica completa,<br>3. Educación media científico-humanista incompleta,<br>4. Educación media científico-humanista completa,<br>5. Educación media técnico-profesional incompleta,<br>6. Educación media técnico-profesional completa,<br>7. Técnico nivel superior incompleto -carreras de 1 a 3 años-,<br>8. Técnico nivel superior completo -carreras de 1 a 3 años-,<br>9. Profesional incompleto -carreras de 4 años o más-,<br>10. Profesional completo -carreras de 4 años o más-,<br>11. Estudios de postgrado, magister/master, doctorado","1. Sí,<br>2. No",null,"1. Chilena,<br>2. Haitiana,<br>3. Sur-coreana,<br>4. Otra","1. Mujer,<br>2. Hombre","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy bajo,<br>2. Muy alto","1. Muy bajo,<br>2. Muy alto","1. Educación básica incompleta,<br>2. Educación básica completa,<br>3. Educación media científico-humanista incompleta,<br>4. Educación media científico-humanista completa,<br>5. Educación media técnico-profesional incompleta,<br>6. Educación media técnico-profesional completa,<br>7. Técnico nivel superior incompleto -carreras de 1 a 3 años-,<br>8. Técnico nivel superior completo -carreras de 1 a 3 años-,<br>9. Profesional incompleto -carreras de 4 años o más-,<br>10. Profesional completo -carreras de 4 años o más-,<br>11. Estudios de postgrado, magister/master, doctorado","1. Sí,<br>2. No",null,"1. Chilena,<br>2. Haitiana,<br>3. Sur-coreana,<br>4. Otra","1. Mujer,<br>2. Hombre","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy bajo,<br>2. Muy alto","1. Muy bajo,<br>2. Muy alto","1. Educación básica incompleta,<br>2. Educación básica completa,<br>3. Educación media científico-humanista incompleta,<br>4. Educación media científico-humanista completa,<br>5. Educación media técnico-profesional incompleta,<br>6. Educación media técnico-profesional completa,<br>7. Técnico nivel superior incompleto -carreras de 1 a 3 años-,<br>8. Técnico nivel superior completo -carreras de 1 a 3 años-,<br>9. Profesional incompleto -carreras de 4 años o más-,<br>10. Profesional completo -carreras de 4 años o más-,<br>11. Estudios de postgrado, magister/master, doctorado","1. Sí,<br>2. No",null,"1. Chilena,<br>2. Haitiana,<br>3. Sur-coreana,<br>4. Otra","1. Mujer,<br>2. Hombre","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy bajo,<br>2. Muy alto","1. Muy bajo,<br>2. Muy alto","1. Educación básica incompleta,<br>2. Educación básica completa,<br>3. Educación media científico-humanista incompleta,<br>4. Educación media científico-humanista completa,<br>5. Educación media técnico-profesional incompleta,<br>6. Educación media técnico-profesional completa,<br>7. Técnico nivel superior incompleto -carreras de 1 a 3 años-,<br>8. Técnico nivel superior completo -carreras de 1 a 3 años-,<br>9. Profesional incompleto -carreras de 4 años o más-,<br>10. Profesional completo -carreras de 4 años o más-,<br>11. Estudios de postgrado, magister/master, doctorado","1. Sí,<br>2. No",null,"1. Chilena,<br>2. Haitiana,<br>3. Sur-coreana,<br>4. Otra","1. Mujer,<br>2. Hombre","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy bajo,<br>2. Muy alto","1. Muy bajo,<br>2. Muy alto","1. Educación básica incompleta,<br>2. Educación básica completa,<br>3. Educación media científico-humanista incompleta,<br>4. Educación media científico-humanista completa,<br>5. Educación media técnico-profesional incompleta,<br>6. Educación media técnico-profesional completa,<br>7. Técnico nivel superior incompleto -carreras de 1 a 3 años-,<br>8. Técnico nivel superior completo -carreras de 1 a 3 años-,<br>9. Profesional incompleto -carreras de 4 años o más-,<br>10. Profesional completo -carreras de 4 años o más-,<br>11. Estudios de postgrado, magister/master, doctorado","1. Sí,<br>2. No",null,"1. Chilena,<br>2. Haitiana,<br>3. Sur-coreana,<br>4. Otra","1. Mujer,<br>2. Hombre","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy bajo,<br>2. Muy alto","1. Muy bajo,<br>2. Muy alto","1. Educación básica incompleta,<br>2. Educación básica completa,<br>3. Educación media científico-humanista incompleta,<br>4. Educación media científico-humanista completa,<br>5. Educación media técnico-profesional incompleta,<br>6. Educación media técnico-profesional completa,<br>7. Técnico nivel superior incompleto -carreras de 1 a 3 años-,<br>8. Técnico nivel superior completo -carreras de 1 a 3 años-,<br>9. Profesional incompleto -carreras de 4 años o más-,<br>10. Profesional completo -carreras de 4 años o más-,<br>11. Estudios de postgrado, magister/master, doctorado","1. Sí,<br>2. No",null,"1. Chilena,<br>2. Haitiana,<br>3. Sur-coreana,<br>4. Otra","1. Mujer,<br>2. Hombre","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy bajo,<br>2. Muy alto","1. Muy bajo,<br>2. Muy alto","1. Educación básica incompleta,<br>2. Educación básica completa,<br>3. Educación media científico-humanista incompleta,<br>4. Educación media científico-humanista completa,<br>5. Educación media técnico-profesional incompleta,<br>6. Educación media técnico-profesional completa,<br>7. Técnico nivel superior incompleto -carreras de 1 a 3 años-,<br>8. Técnico nivel superior completo -carreras de 1 a 3 años-,<br>9. Profesional incompleto -carreras de 4 años o más-,<br>10. Profesional completo -carreras de 4 años o más-,<br>11. Estudios de postgrado, magister/master, doctorado","1. Sí,<br>2. No",null,"1. Chilena,<br>2. Haitiana,<br>3. Sur-coreana,<br>4. Otra","1. Mujer,<br>2. Hombre","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy bajo,<br>2. Muy alto","1. Muy bajo,<br>2. Muy alto","1. Educación básica incompleta,<br>2. Educación básica completa,<br>3. Educación media científico-humanista incompleta,<br>4. Educación media científico-humanista completa,<br>5. Educación media técnico-profesional incompleta,<br>6. Educación media técnico-profesional completa,<br>7. Técnico nivel superior incompleto -carreras de 1 a 3 años-,<br>8. Técnico nivel superior completo -carreras de 1 a 3 años-,<br>9. Profesional incompleto -carreras de 4 años o más-,<br>10. Profesional completo -carreras de 4 años o más-,<br>11. Estudios de postgrado, magister/master, doctorado","1. Sí,<br>2. No",null,"1. Chilena,<br>2. Haitiana,<br>3. Sur-coreana,<br>4. Otra","1. Mujer,<br>2. Hombre","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy bajo,<br>2. Muy alto","1. Muy bajo,<br>2. Muy alto","1. Educación básica incompleta,<br>2. Educación básica completa,<br>3. Educación media científico-humanista incompleta,<br>4. Educación media científico-humanista completa,<br>5. Educación media técnico-profesional incompleta,<br>6. Educación media técnico-profesional completa,<br>7. Técnico nivel superior incompleto -carreras de 1 a 3 años-,<br>8. Técnico nivel superior completo -carreras de 1 a 3 años-,<br>9. Profesional incompleto -carreras de 4 años o más-,<br>10. Profesional completo -carreras de 4 años o más-,<br>11. Estudios de postgrado, magister/master, doctorado","1. Sí,<br>2. No",null,"1. Chilena,<br>2. Haitiana,<br>3. Sur-coreana,<br>4. Otra","1. Mujer,<br>2. Hombre","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy bajo,<br>2. Muy alto","1. Muy bajo,<br>2. Muy alto","1. Educación básica incompleta,<br>2. Educación básica completa,<br>3. Educación media científico-humanista incompleta,<br>4. Educación media científico-humanista completa,<br>5. Educación media técnico-profesional incompleta,<br>6. Educación media técnico-profesional completa,<br>7. Técnico nivel superior incompleto -carreras de 1 a 3 años-,<br>8. Técnico nivel superior completo -carreras de 1 a 3 años-,<br>9. Profesional incompleto -carreras de 4 años o más-,<br>10. Profesional completo -carreras de 4 años o más-,<br>11. Estudios de postgrado, magister/master, doctorado","1. Sí,<br>2. No",null,"1. Chilena,<br>2. Haitiana,<br>3. Sur-coreana,<br>4. Otra","1. Mujer,<br>2. Hombre","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy bajo,<br>2. Muy alto","1. Muy bajo,<br>2. Muy alto","1. Educación básica incompleta,<br>2. Educación básica completa,<br>3. Educación media científico-humanista incompleta,<br>4. Educación media científico-humanista completa,<br>5. Educación media técnico-profesional incompleta,<br>6. Educación media técnico-profesional completa,<br>7. Técnico nivel superior incompleto -carreras de 1 a 3 años-,<br>8. Técnico nivel superior completo -carreras de 1 a 3 años-,<br>9. Profesional incompleto -carreras de 4 años o más-,<br>10. Profesional completo -carreras de 4 años o más-,<br>11. Estudios de postgrado, magister/master, doctorado","1. Sí,<br>2. No",null,"1. Chilena,<br>2. Haitiana,<br>3. Sur-coreana,<br>4. Otra","1. Mujer,<br>2. Hombre","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy bajo,<br>2. Muy alto","1. Muy bajo,<br>2. Muy alto","1. Educación básica incompleta,<br>2. Educación básica completa,<br>3. Educación media científico-humanista incompleta,<br>4. Educación media científico-humanista completa,<br>5. Educación media técnico-profesional incompleta,<br>6. Educación media técnico-profesional completa,<br>7. Técnico nivel superior incompleto -carreras de 1 a 3 años-,<br>8. Técnico nivel superior completo -carreras de 1 a 3 años-,<br>9. Profesional incompleto -carreras de 4 años o más-,<br>10. Profesional completo -carreras de 4 años o más-,<br>11. Estudios de postgrado, magister/master, doctorado","1. Sí,<br>2. No","1. 1 – Nada,<br>2. 2,<br>3. 3,<br>4. 4 – Algo,<br>5. 5,<br>6. 6,<br>7. 7 - Extremadamente",null,"1. Muy fuerte,<br>2. Fuerte,<br>3. Débil,<br>4. Muy débil","1. Muy fuerte,<br>2. Fuerte,<br>3. Débil,<br>4. Muy débil","1. Muy fuerte,<br>2. Fuerte,<br>3. Débil,<br>4. Muy débil","1. Muy fuerte,<br>2. Fuerte,<br>3. Débil,<br>4. Muy débil","1. Muy fuerte,<br>2. Fuerte,<br>3. Débil,<br>4. Muy débil","1. Muy fuerte,<br>2. Fuerte,<br>3. Débil,<br>4. Muy débil","1. Muy fuerte,<br>2. Fuerte,<br>3. Débil,<br>4. Muy débil","1. Muy fuerte,<br>2. Fuerte,<br>3. Débil,<br>4. Muy débil","1. Muy fuerte,<br>2. Fuerte,<br>3. Débil,<br>4. Muy débil",null,"1. Muy lejos,<br>2. Lejos,<br>3. Cerca,<br>4. Muy cerca","1. Muy lejos,<br>2. Lejos,<br>3. Cerca,<br>4. Muy cerca","1. Muy lejos,<br>2. Lejos,<br>3. Cerca,<br>4. Muy cerca","1. Muy lejos,<br>2. Lejos,<br>3. Cerca,<br>4. Muy cerca","1. Muy lejos,<br>2. Lejos,<br>3. Cerca,<br>4. Muy cerca","1. Muy lejos,<br>2. Lejos,<br>3. Cerca,<br>4. Muy cerca","1. Muy lejos,<br>2. Lejos,<br>3. Cerca,<br>4. Muy cerca","1. Muy lejos,<br>2. Lejos,<br>3. Cerca,<br>4. Muy cerca","1. Muy lejos,<br>2. Lejos,<br>3. Cerca,<br>4. Muy cerca","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo",null,"1. Mucho,<br>2. Algo,<br>3. Bastante,<br>4. Nada","1. Mucho,<br>2. Algo,<br>3. Bastante,<br>4. Nada","1. Mucho,<br>2. Algo,<br>3. Bastante,<br>4. Nada","1. Mucho,<br>2. Algo,<br>3. Bastante,<br>4. Nada","1. Mucho,<br>2. Algo,<br>3. Bastante,<br>4. Nada","1. Mucho,<br>2. Algo,<br>3. Bastante,<br>4. Nada","1. Mucho,<br>2. Algo,<br>3. Bastante,<br>4. Nada","1. Mucho,<br>2. Algo,<br>3. Bastante,<br>4. Nada","1. Mucho,<br>2. Algo,<br>3. Bastante,<br>4. Nada","1. Nada,<br>2. Poco,<br>3. Bastante,<br>4. Mucho","1. Nada,<br>2. Poco,<br>3. Bastante,<br>4. Mucho",null,"1. Muy malo,<br>2. Muy bueno","1. Muy malo,<br>2. Muy bueno","1. Muy malo,<br>2. Muy bueno","1. Muy malo,<br>2. Muy bueno","1. Muy malo,<br>2. Muy bueno","1. Muy malo,<br>2. Muy bueno","1. Muy malo,<br>2. Muy bueno","1. Muy malo,<br>2. Muy bueno","1. Muy malo,<br>2. Muy bueno",null,"1. Hombres mucho más,<br>2. Hombres bastante más,<br>3. Hombres un poco más,<br>4. Hombres y mujeres por igual,<br>5. Mujeres un poco más,<br>6. Mujeres bastante más,<br>7. Mujeres mucho más","1. Hombres mucho más,<br>2. Hombres bastante más,<br>3. Hombres un poco más,<br>4. Hombres y mujeres por igual,<br>5. Mujeres un poco más,<br>6. Mujeres bastante más,<br>7. Mujeres mucho más","1. Hombres mucho más,<br>2. Hombres bastante más,<br>3. Hombres un poco más,<br>4. Hombres y mujeres por igual,<br>5. Mujeres un poco más,<br>6. Mujeres bastante más,<br>7. Mujeres mucho más","1. Hombres mucho más,<br>2. Hombres bastante más,<br>3. Hombres un poco más,<br>4. Hombres y mujeres por igual,<br>5. Mujeres un poco más,<br>6. Mujeres bastante más,<br>7. Mujeres mucho más","1. Hombres mucho más,<br>2. Hombres bastante más,<br>3. Hombres un poco más,<br>4. Hombres y mujeres por igual,<br>5. Mujeres un poco más,<br>6. Mujeres bastante más,<br>7. Mujeres mucho más","1. Hombres mucho más,<br>2. Hombres bastante más,<br>3. Hombres un poco más,<br>4. Hombres y mujeres por igual,<br>5. Mujeres un poco más,<br>6. Mujeres bastante más,<br>7. Mujeres mucho más","1. Hombres mucho más,<br>2. Hombres bastante más,<br>3. Hombres un poco más,<br>4. Hombres y mujeres por igual,<br>5. Mujeres un poco más,<br>6. Mujeres bastante más,<br>7. Mujeres mucho más","1. Hombres mucho más,<br>2. Hombres bastante más,<br>3. Hombres un poco más,<br>4. Hombres y mujeres por igual,<br>5. Mujeres un poco más,<br>6. Mujeres bastante más,<br>7. Mujeres mucho más","1. Hombres mucho más,<br>2. Hombres bastante más,<br>3. Hombres un poco más,<br>4. Hombres y mujeres por igual,<br>5. Mujeres un poco más,<br>6. Mujeres bastante más,<br>7. Mujeres mucho más","1. Hombres mucho más,<br>2. Hombres bastante más,<br>3. Hombres un poco más,<br>4. Hombres y mujeres por igual,<br>5. Mujeres un poco más,<br>6. Mujeres bastante más,<br>7. Mujeres mucho más","1. Hombres mucho más,<br>2. Hombres bastante más,<br>3. Hombres un poco más,<br>4. Hombres y mujeres por igual,<br>5. Mujeres un poco más,<br>6. Mujeres bastante más,<br>7. Mujeres mucho más",null,"1. Migrantes mucho más,<br>2. Migrantes bastante más,<br>3. Migrantes un poco más,<br>4. Migrantes y chilenos/as por igual,<br>5. Chilenos/as un poco más,<br>6. Chilenos/as bastante más,<br>7. Chilenos/as mucho más","1. Migrantes mucho más,<br>2. Migrantes bastante más,<br>3. Migrantes un poco más,<br>4. Migrantes y chilenos/as por igual,<br>5. Chilenos/as un poco más,<br>6. Chilenos/as bastante más,<br>7. Chilenos/as mucho más","1. Migrantes mucho más,<br>2. Migrantes bastante más,<br>3. Migrantes un poco más,<br>4. Migrantes y chilenos/as por igual,<br>5. Chilenos/as un poco más,<br>6. Chilenos/as bastante más,<br>7. Chilenos/as mucho más","1. Migrantes mucho más,<br>2. Migrantes bastante más,<br>3. Migrantes un poco más,<br>4. Migrantes y chilenos/as por igual,<br>5. Chilenos/as un poco más,<br>6. Chilenos/as bastante más,<br>7. Chilenos/as mucho más","1. Migrantes mucho más,<br>2. Migrantes bastante más,<br>3. Migrantes un poco más,<br>4. Migrantes y chilenos/as por igual,<br>5. Chilenos/as un poco más,<br>6. Chilenos/as bastante más,<br>7. Chilenos/as mucho más","1. Migrantes mucho más,<br>2. Migrantes bastante más,<br>3. Migrantes un poco más,<br>4. Migrantes y chilenos/as por igual,<br>5. Chilenos/as un poco más,<br>6. Chilenos/as bastante más,<br>7. Chilenos/as mucho más","1. Migrantes mucho más,<br>2. Migrantes bastante más,<br>3. Migrantes un poco más,<br>4. Migrantes y chilenos/as por igual,<br>5. Chilenos/as un poco más,<br>6. Chilenos/as bastante más,<br>7. Chilenos/as mucho más","1. Migrantes mucho más,<br>2. Migrantes bastante más,<br>3. Migrantes un poco más,<br>4. Migrantes y chilenos/as por igual,<br>5. Chilenos/as un poco más,<br>6. Chilenos/as bastante más,<br>7. Chilenos/as mucho más","1. Migrantes mucho más,<br>2. Migrantes bastante más,<br>3. Migrantes un poco más,<br>4. Migrantes y chilenos/as por igual,<br>5. Chilenos/as un poco más,<br>6. Chilenos/as bastante más,<br>7. Chilenos/as mucho más","1. Migrantes mucho más,<br>2. Migrantes bastante más,<br>3. Migrantes un poco más,<br>4. Migrantes y chilenos/as por igual,<br>5. Chilenos/as un poco más,<br>6. Chilenos/as bastante más,<br>7. Chilenos/as mucho más","1. Migrantes mucho más,<br>2. Migrantes bastante más,<br>3. Migrantes un poco más,<br>4. Migrantes y chilenos/as por igual,<br>5. Chilenos/as un poco más,<br>6. Chilenos/as bastante más,<br>7. Chilenos/as mucho más","1. Blanco,<br>2. Negro,<br>3. Rojo,<br>4. Rosado,<br>5. Verde,<br>6. Azul","1. Particular pagado,<br>2. Particular subvencionado,<br>3. Municipal,<br>4. Servicio Local de Educación Pública,<br>5. Otro",null,null,null,"1. Contrato de trabajo indefinido,<br>2. Contrato de trabajo a plazo fijo,<br>3. Contrato por honorarios,<br>4. No sabe,<br>5. Otro","1. Tiempo completo (más de 35 hrs.),<br>2. Part time (entre 20 y 35 hrs.),<br>3. Menos de 20 hrs.","1. 0%,<br>2. 1-10%,<br>3. 11-40%,<br>4. 41-40%,<br>5. 61-90%,<br>6. Más de 91%,<br>7. No sabe",null,"1. Sí,<br>2. No,<br>3. No sabe","1. Sí,<br>2. No,<br>3. No sabe","1. Sí,<br>2. No,<br>3. No sabe","1. Sí,<br>2. No,<br>3. No sabe","1. Sí,<br>2. No,<br>3. No sabe","1. Sí,<br>2. No,<br>3. No sabe","1. Sí,<br>2. No,<br>3. No sabe","1. Sí,<br>2. No,<br>3. No sabe","1. Sí,<br>2. No,<br>3. No sabe","1. Educación básica incompleta,<br>2. Educación básica completa,<br>3. Educación media científico-humanista incompleta,<br>4. Educación media científico-humanista completa,<br>5. Educación media técnico-profesional incompleta,<br>6. Educación media técnico-profesional completa,<br>7. Técnico nivel superior incompleto -carreras de 1 a 3 años-,<br>8. Técnico nivel superior completo -carreras de 1 a 3 años-,<br>9. Profesional incompleto -carreras de 4 años o más-,<br>10. Profesional completo -carreras de 4 años o más-,<br>11. Estudios de postgrado, magister/master, doctorado","1. Católica,<br>2. Evangélica,<br>3. Testigo de Jehová,<br>4. Judía,<br>5. Mormona,<br>6. Ortodoxa,<br>7. Ateo,<br>8. Agnóstico,<br>9. Otra,<br>10. Ninguna,<br>11. Prefiero no responder","1. Sin educación formal,<br>2. Educación básica o preparatoria incompleta,<br>3. Educación básica o preparatoria completa,<br>4. Educación media científico-humanista incompleta,<br>5. Educación media científico-humanista completa,<br>6. Humanidades incompleta -sistema antiguo-,<br>7. Humanidades completa -sistema antiguo-,<br>8. Educación media técnico-profesional incompleta,<br>9. Educación media técnico-profesional completa,<br>10. Técnica, comercial, industrial, normalista incompleta -sistema antiguo-,<br>11. Técnica, comercial, industrial, normalista completa -sistema antiguo-,<br>12. Técnico nivel superior incompleto -carreras de 1 a 3 años-,<br>13. Técnico nivel superior completo -carreras de 1 a 3 años-,<br>14. Profesional incompleto -carreras de 4 años o más-,<br>15. Profesional completo -carreras de4 años o más-,<br>16. Estudios de postgrado, magister/master, doctorado","1. Menos de $35.000 líquidos,<br>2. Entre $35.001 y $56.000 líquidos,<br>3. Entre $56.001 y $78.000 líquidos,<br>4. Entre $78.001 y $101.000 líquidos,<br>5. Entre $101.001 y $134.000 líquidos,<br>6. Entre $134.001 y $179.000 líquidos,<br>7. Entre $179.001 y $224.000 líquidos,<br>8. Entre $224.001 y $291.000 líquidos,<br>9. Entre $291.001 y $358.000 líquidos,<br>10. Entre $358.001 y $448.000 líquidos,<br>11. Entre $448.001 y $1.000.000 líquidos,<br>12. Entre $1.000.001 y $2.000.000 líquidos,<br>13. Entre $2.000.002 y $3.000.003 líquidos,<br>14. Más de $3.000.000 líquidos","1. Alacalufe (Kawashkar),<br>2. Atacameño (Likan Antai),<br>3. Amaina,<br>4. Colla,<br>5. Mapuche,<br>6. Quechua,<br>7. Rapa Nui,<br>8. Yamana (Yagán),<br>9. Diaguita,<br>10. Otro,<br>11. No pertenezco",null,"1. Chilena,<br>2. Peruana,<br>3. Boliviana,<br>4. Colombiana,<br>5. Venezolana,<br>6. Haitiana,<br>7. Otra",null,null,"1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Muy en desacuerdo,<br>2. En desacuerdo,<br>3. De acuerdo,<br>4. Muy de acuerdo","1. Nada masculino/a,<br>2. Muy masculino/a","1. Nada femenino/a,<br>2. Muy femenino/a",null]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>name<\/th>\n      <th>label<\/th>\n      <th>value_labels<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"info":false,"paging":false,"columnDefs":[{"name":"name","targets":0},{"name":"label","targets":1},{"name":"value_labels","targets":2}],"order":[],"autoWidth":false,"orderClasses":false,"orderCellsTop":true}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+
+
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
+      <a href="./index.html" class="pagination-link" aria-label="Presentación">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Presentación</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./02-results.html" class="pagination-link" aria-label="Reporte Resultados">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Reporte Resultados</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer"><div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Fondecyt UV.</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Este libro se construyó con <a href="https://quarto.org/">Quarto</a>.</p>
+</div>
+  </div>
+</footer>
+
+
+</body></html>

@@ -1,0 +1,52 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Manual Metodológico fondecyt UV",
+    "section": "",
+    "text": "Presentación\nLa Encuesta del Fondecyt UV",
+    "crumbs": [
+      "Presentación"
+    ]
+  },
+  {
+    "objectID": "01-codebook.html",
+    "href": "01-codebook.html",
+    "title": "1  Libro de códigos",
+    "section": "",
+    "text": "1.1 Instrucciones\nEl Libro de Códigos que se presentan en la siguiente sección corresponden a una herramienta interactiva que busca presentar de manera eficiente información respecto a las variables que componen la base de datos.\nEl libro muestra el código de cada variable, la etiqueta asociada a la variable con la redacción del ítem, y las categorías de respuesta y códigos asociados. Estas corresponden a tres columnas del libro de códigos denominadas name, label y value_label, respectivamente.\nSe puede hacer uso del buscador que se encuentra al principio del libro para encontrar información de manera más rápida. También se pueden usar los buscadores por cada columna, los cuales irán filtrando los datos que contengan el término de búsqueda.\nIncluimos etiquetas de variables en el Libro de Códigos, pero no en las bases de datos. El equipo de investigación las diseñó con la intención de describir brevemente el fenómeno o dimensión a medir. La redacción de la pregunta sigue a las etiquetas, incluyendo códigos y categorías de respuesta. En la construcción de la base de datos, ingresamos solo los códigos de respuesta como valores numéricos.\nEn la columna value_labels se muestran las categorías de respuesta de cada variable. No obstante, si la variable es numérica o de respuesta abierta (texto), la casilla se mostrará en blanco, ya que no hay ninguna categoría que mostrar. También puede ocurrir el caso que la variable sea numérica, pero tenga disponibles las categorías “88. No Sabe” y “99. No Responde”. En estos casos sólo se visualizarán ambas categorías en el libro de código.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Libro de códigos</span>"
+    ]
+  },
+  {
+    "objectID": "01-codebook.html#libro-de-códigos",
+    "href": "01-codebook.html#libro-de-códigos",
+    "title": "1  Libro de códigos",
+    "section": "\n1.2 Libro de códigos",
+    "text": "1.2 Libro de códigos",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Libro de códigos</span>"
+    ]
+  },
+  {
+    "objectID": "02-results.html",
+    "href": "02-results.html",
+    "title": "2  Reporte Resultados",
+    "section": "",
+    "text": "2.1 Participantes\nSe han iniciado 10 encuestas, de las cuales 10 han sido completadas.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Reporte Resultados</span>"
+    ]
+  },
+  {
+    "objectID": "02-results.html#reporte",
+    "href": "02-results.html#reporte",
+    "title": "2  Reporte Resultados",
+    "section": "\n2.2 reporte",
+    "text": "2.2 reporte\n\n\n¿Cuál es el nombre oficial del establecimiento educacional en el que usted imparte clases y que ha sido invitado a participar en este estudio? (x) &lt;character&gt; \n# total N=10 valid N=10 mean=3.40 sd=2.01\n\nValue                             | N | Raw % | Valid % | Cum. %\n----------------------------------------------------------------\nAna María Janer                   | 1 |    10 |      10 |     10\nColegio Ana María Janer           | 4 |    40 |      40 |     50\nColegio Santa María de La Florida | 1 |    10 |      10 |     60\nEscuela Doctor Aldo Francia Boido | 1 |    10 |      10 |     70\nEscuela Grecia                    | 1 |    10 |      10 |     80\nescuela Republica del Uruguay     | 1 |    10 |      10 |     90\nSanta María de la Florida         | 1 |    10 |      10 |    100\n&lt;NA&gt;                              | 0 |     0 |    &lt;NA&gt; |   &lt;NA&gt;\n\n\n¿En cuál de los siguientes niveles enseña usted? Marque todas las opciones que correspondan. (x) &lt;character&gt; \n# total N=10 valid N=10 mean=2.00 sd=0.82\n\nValue |          Label | N | Raw % | Valid % | Cum. %\n-----------------------------------------------------\n    1 | Primero básico | 3 |    30 |      30 |     30\n    2 | Segundo básico | 4 |    40 |      40 |     70\n    3 | Tercero básico | 3 |    30 |      30 |    100\n    4 |           Otro | 0 |     0 |       0 |    100\n &lt;NA&gt; |           &lt;NA&gt; | 0 |     0 |    &lt;NA&gt; |   &lt;NA&gt;\n\n\nDentro de este establecimiento educacional, indique cada curso en el cual realiza clases, incluyendo nivel y letra (por ejemplo, “3ro básico B” o “4to básico A”). Si imparte clases en más de un curso, sepárelos por comas. (x) &lt;character&gt; \n# total N=10 valid N=10 mean=5.50 sd=3.03\n\nValue                                                                                           \n------------------------------------------------------------------------------------------------\n1 | y 3 | basico                                                                                \n1ro báscio A y B,  2do básico  Ay B                                                             \n1ro básico A, 1ro básico B, 2do básico A, 2do básico B, 3ro básico A, 4to básico A, 4to básico B\n2 basico C                                                                                      \n2°A                                                                                             \n2do básico A                                                                                    \n3° A, 5° B y 6° A                                                                               \n3ro Básico B, 5to Básico A, 6to Básico B                                                        \n3ro básico C, 3ro básico E, 5to básico A, 5to básico  C                                         \nsegundo B                                                                                       \n&lt;NA&gt;                                                                                            \n\nN | Raw % | Valid % | Cum. %\n----------------------------\n1 |    10 |      10 |     10\n1 |    10 |      10 |     20\n1 |    10 |      10 |     30\n1 |    10 |      10 |     40\n1 |    10 |      10 |     50\n1 |    10 |      10 |     60\n1 |    10 |      10 |     70\n1 |    10 |      10 |     80\n1 |    10 |      10 |     90\n1 |    10 |      10 |    100\n0 |     0 |    &lt;NA&gt; |   &lt;NA&gt;",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Reporte Resultados</span>"
+    ]
+  }
+]
