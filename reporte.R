@@ -1,12 +1,13 @@
 pacman::p_load(readr, dplyr, formr)
 
-formr_connect("kevin.carrasco@ug.uchile.cl", "k959371343")
-base = formr_results("vignetas_mat")
-base <- data
-#base <- read_csv("input/data/original/vignetas 2026-05-11.csv")
+#formr_connect("kevin.carrasco@ug.uchile.cl", "k959371343")
+#base = formr_results("vignetas_mat")
+#save(base, file="output/base.RData")
+#base <- data
+#base <- read_csv("input/data/original/vignetas 2026-05-19.csv")
 
-#piloto_2026_04_14 <- jsonlite::read_json("piloto-2026-04-14.json", simplifyVector = TRUE)
-#piloto_2026_04_14 <- as.data.frame(piloto_2026_04_14)
+base <- jsonlite::read_json("input/data/original/vignetas 2026-05-19.json", simplifyVector = TRUE)
+base <- as.data.frame(base)
 
 data <- filter(base, start_01==1)
 names(data)
@@ -64,3 +65,5 @@ completan_vignetas <- data %>% filter(!is.na(gconflict_01))
 save(iniciadas, file="output/iniciadas.RData")
 # save(completan_vignetas, file="output/completan_vignetas.RData")
 save(completas, file="output/completas.RData")
+
+table(iniciadas$genero)

@@ -126,7 +126,13 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
 <li><a href="#participantes" id="toc-participantes" class="nav-link active" data-scroll-target="#participantes"><span class="header-section-number">2.1</span> Participantes</a></li>
-  <li><a href="#reporte" id="toc-reporte" class="nav-link" data-scroll-target="#reporte"><span class="header-section-number">2.2</span> reporte</a></li>
+  <li><a href="#reporte-completas" id="toc-reporte-completas" class="nav-link" data-scroll-target="#reporte-completas"><span class="header-section-number">2.2</span> reporte completas</a></li>
+  <li>
+<a href="#reporte-incompletas" id="toc-reporte-incompletas" class="nav-link" data-scroll-target="#reporte-incompletas"><span class="header-section-number">2.3</span> reporte incompletas</a>
+  <ul class="collapse">
+<li><a href="#abandono" id="toc-abandono" class="nav-link" data-scroll-target="#abandono"><span class="header-section-number">2.3.1</span> Abandono</a></li>
+  </ul>
+</li>
   </ul></nav>
     </div>
 <!-- main -->
@@ -148,11 +154,11 @@ ul.task-list li input[type="checkbox"] {
 </header><section id="participantes" class="level2" data-number="2.1"><h2 data-number="2.1" class="anchored" data-anchor-id="participantes">
 <span class="header-section-number">2.1</span> Participantes</h2>
 <p>Se han iniciado 18 encuestas, de las cuales 16 han sido completadas.</p>
-</section><section id="reporte" class="level2" data-number="2.2"><h2 data-number="2.2" class="anchored" data-anchor-id="reporte">
-<span class="header-section-number">2.2</span> reporte</h2>
+</section><section id="reporte-completas" class="level2" data-number="2.2"><h2 data-number="2.2" class="anchored" data-anchor-id="reporte-completas">
+<span class="header-section-number">2.2</span> reporte completas</h2>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
-<pre><code>¿Cuál es el nombre oficial del establecimiento educacional en el que usted imparte clases y que ha sido invitado a participar en este estudio? (x) &lt;character&gt; 
+<pre><code>x &lt;character&gt; 
 # total N=16 valid N=16 mean=5.81 sd=3.39
 
 Value                             | N | Raw % | Valid % | Cum. %
@@ -172,20 +178,19 @@ Santa María de La Florida         | 1 |  6.25 |    6.25 | 100.00
 &lt;NA&gt;                              | 0 |  0.00 |    &lt;NA&gt; |   &lt;NA&gt;</code></pre>
 </div>
 <div class="cell-output cell-output-stdout">
-<pre><code>¿En cuál de los siguientes niveles enseña usted? Marque todas las opciones que correspondan. (x) &lt;character&gt; 
+<pre><code>x &lt;character&gt; 
 # total N=16 valid N=16 mean=2.50 sd=1.15
 
-Value |          Label | N | Raw % | Valid % | Cum. %
------------------------------------------------------
-    1 | Primero básico | 5 | 31.25 |   31.25 |  31.25
-    2 |           1, 2 | 1 |  6.25 |    6.25 |  37.50
-    3 | Segundo básico | 7 | 43.75 |   43.75 |  81.25
-    4 | Tercero básico | 3 | 18.75 |   18.75 | 100.00
-    5 |           Otro | 0 |  0.00 |    0.00 | 100.00
- &lt;NA&gt; |           &lt;NA&gt; | 0 |  0.00 |    &lt;NA&gt; |   &lt;NA&gt;</code></pre>
+Value | N | Raw % | Valid % | Cum. %
+------------------------------------
+1     | 5 | 31.25 |   31.25 |  31.25
+1, 2  | 1 |  6.25 |    6.25 |  37.50
+2     | 7 | 43.75 |   43.75 |  81.25
+3     | 3 | 18.75 |   18.75 | 100.00
+&lt;NA&gt;  | 0 |  0.00 |    &lt;NA&gt; |   &lt;NA&gt;</code></pre>
 </div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Dentro de este establecimiento educacional, indique cada curso en el cual realiza clases, incluyendo nivel y letra (por ejemplo, “3ro básico B” o “4to básico A”). Si imparte clases en más de un curso, sepárelos por comas. (x) &lt;character&gt; 
+<pre><code>x &lt;character&gt; 
 # total N=16 valid N=16 mean=8.06 sd=4.33
 
 Value                                                                                           
@@ -227,9 +232,46 @@ N | Raw % | Valid % | Cum. %
 0 |  0.00 |    &lt;NA&gt; |   &lt;NA&gt;</code></pre>
 </div>
 </div>
+</section><section id="reporte-incompletas" class="level2" data-number="2.3"><h2 data-number="2.3" class="anchored" data-anchor-id="reporte-incompletas">
+<span class="header-section-number">2.3</span> reporte incompletas</h2>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>x &lt;character&gt; 
+# total N=2 valid N=2 mean=1.50 sd=0.71
+
+Value                          | N | Raw % | Valid % | Cum. %
+-------------------------------------------------------------
+Colegio Santa María La Florida | 1 |    50 |      50 |     50
+Leonardo Murialdo              | 1 |    50 |      50 |    100
+&lt;NA&gt;                           | 0 |     0 |    &lt;NA&gt; |   &lt;NA&gt;</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>x &lt;character&gt; 
+# total N=2 valid N=2 mean=1.50 sd=0.71
+
+Value | N | Raw % | Valid % | Cum. %
+------------------------------------
+    1 | 1 |    50 |      50 |     50
+    2 | 1 |    50 |      50 |    100
+ &lt;NA&gt; | 0 |     0 |    &lt;NA&gt; |   &lt;NA&gt;</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>x &lt;character&gt; 
+# total N=2 valid N=2 mean=1.50 sd=0.71
+
+Value        | N | Raw % | Valid % | Cum. %
+-------------------------------------------
+1° Básico E  | 1 |    50 |      50 |     50
+2do Básico A | 1 |    50 |      50 |    100
+&lt;NA&gt;         | 0 |     0 |    &lt;NA&gt; |   &lt;NA&gt;</code></pre>
+</div>
+</div>
+<section id="abandono" class="level3" data-number="2.3.1"><h3 data-number="2.3.1" class="anchored" data-anchor-id="abandono">
+<span class="header-section-number">2.3.1</span> Abandono</h3>
+<p>Ambos casos abandonan durante el módulo de viñetas.</p>
 
 
-</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+</section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
     const anchorJS = new window.AnchorJS();
