@@ -15,7 +15,7 @@ getwd()
 ```
 
 ```{r load-library, include=FALSE}
-pacman::p_load(dplyr, sjlabelled, summarytools, sjmisc, readr, ggplot2, haven, writexl, lubridate)
+pacman::p_load(dplyr, sjlabelled, summarytools, sjmisc, readr, ggplot2, haven, writexl, lubridate, janitor)
 ```
 
 ```{r load-dataset, include=FALSE}
@@ -73,11 +73,27 @@ Se han iniciado `r nrow(iniciadas)` encuestas, de las cuales `r nrow(completas)`
 
 ## reporte completas
 
+**Colegios**
+
 ```{r}
 reporte <- completas %>% dplyr::select(nombre_colegio, curso, curso2)
 
+reporte <- reporte %>%
+  mutate(nombre_colegio = janitor::make_clean_names(nombre_colegio,
+         allow_dupes = TRUE))
+
 sjmisc::frq(reporte$nombre_colegio)
+```
+
+**Curso 1** (pregunta de alternativas)
+
+```{r}
 sjmisc::frq(reporte$curso)
+```
+
+**Curso 2** (pregunta de texto)
+
+```{r}
 sjmisc::frq(reporte$curso2)
 ```
 
@@ -86,15 +102,31 @@ sjmisc::frq(reporte$curso2)
 ```{r}
 reporte <- incompletas %>% dplyr::select(nombre_colegio, curso, curso2)
 
+reporte <- reporte %>%
+  mutate(nombre_colegio = janitor::make_clean_names(nombre_colegio,
+         allow_dupes = TRUE))
+
 sjmisc::frq(reporte$nombre_colegio)
+```
+
+**Curso 1** (pregunta de alternativas)
+
+```{r}
 sjmisc::frq(reporte$curso)
+```
+
+**Curso 2** (pregunta de texto)
+
+```{r}
 sjmisc::frq(reporte$curso2)
 ```
 
 ### Abandono
 
 ```{r}
-completan_vignetas <- incompletas %>% filter(is.na(gconflict_01))
+modulo1 <- incompletas %>% filter(!is.na(e_civil))
+atencion1 <- incompletas %>% filter(!is.na(atencion1))
+modulo2 <- incompletas %>% filter(!is.na(gconflict_09))
 # completan_vignetas <- incompletas %>% filter(!is.na(gc_commonality_01))
 # completan_vignetas <- incompletas %>% filter(!is.na(gc_discrimination_01))
 # completan_vignetas <- incompletas %>% filter(!is.na(gaffect_01))
@@ -108,4 +140,10 @@ completan_vignetas <- incompletas %>% filter(is.na(gconflict_01))
 # completan_vignetas <- incompletas %>% filter(!is.na(depe))
 ```
 
-Ambos casos abandonan durante el módulo de viñetas.
+De las `r nrow(incompletas)` personas que no terminan la encuesta:
+
+- `r nrow(modulo1)` completan la sección inicial de preguntas demográficas.
+
+- `r nrow(atencion1)` completan el módulo de atención luego de completar las viñetas.
+
+- `r nrow(modulo2)` completan el módulo de conflictos entre chilenos y otros.
