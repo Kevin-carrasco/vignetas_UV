@@ -6,7 +6,7 @@ pacman::p_load(readr, dplyr, formr)
 #base <- data
 #base <- read_csv("input/data/original/vignetas 2026-05-19.csv")
 
-base <- jsonlite::read_json("input/data/original/vignetas 2026-07-06.json", simplifyVector = TRUE)
+base <- jsonlite::read_json("input/data/original/vignetas 2026-07-13.json", simplifyVector = TRUE)
 base <- as.data.frame(base)
 
 data <- filter(base, start_01==1)
@@ -26,6 +26,8 @@ sjmisc::frq(data$nombre_colegio)
 
 data <- data %>%
   filter(nombre_colegio!="123")
+data <- data %>%
+  filter(nombre_colegio!="test")
 
 # bajo_rendimiento <- data %>%
 #   filter(ran_group == 1)
@@ -35,7 +37,7 @@ data <- data %>%
 
 completas <- data %>%
   filter(!is.na(ended))
-.
+
 incompletas <- data %>%
   filter(is.na(ended))
 
