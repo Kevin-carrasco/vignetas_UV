@@ -6,8 +6,8 @@ pacman::p_load(readr, dplyr, formr)
 #base <- data
 #base <- read_csv("input/data/original/vignetas 2026-05-19.csv")
 
-base <- jsonlite::read_json("input/data/original/vignetas 2026-07-13.json", simplifyVector = TRUE)
-base <- as.data.frame(base)
+base <- jsonlite::read_json("input/data/original/vignetas 2026-08-10.json", simplifyVector = TRUE)
+
 
 data <- filter(base, start_01==1)
 names(data)
@@ -61,6 +61,34 @@ incompletas <- data %>%
 # 
 # completan_vignetas <- incompletas %>% filter(!is.na(depe))
 
+
+
+base2 <- jsonlite::read_json("input/data/original/vignetas rforms 2026-08-10.json", simplifyVector = TRUE)
+base2 <- as.data.frame(base2)
+
+data2 <- filter(base2, start_01==1)
+names(data2)
+class(data2$created)
+
+data2 <- data2 %>%
+  mutate(created = as.POSIXct(created))
+
+data2 <- data2 %>%
+  filter(created >= as.POSIXct("2026-05-01 00:00:00"))
+
+data2 <- data2 %>%
+  filter(!is.na(curso))
+
+sjmisc::frq(data2$nombre_colegio)
+
+data2 <- data2 %>%
+  filter(nombre_colegio!="test")
+
+completas2 <- data2 %>%
+  filter(!is.na(ended))
+
+data <- rbind(data, data2)
+completas <- rbind(completas, completas2)
 
 iniciadas <- data
 completan_vignetas <- data %>% filter(!is.na(gconflict_01))
