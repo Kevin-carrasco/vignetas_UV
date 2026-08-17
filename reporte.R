@@ -6,7 +6,7 @@ pacman::p_load(readr, dplyr, formr)
 #base <- data
 #base <- read_csv("input/data/original/vignetas 2026-05-19.csv")
 
-base <- jsonlite::read_json("input/data/original/vignetas 2026-08-10.json", simplifyVector = TRUE)
+base <- jsonlite::read_json("input/data/original/vignetas 2026-08-17.json", simplifyVector = TRUE)
 
 
 data <- filter(base, start_01==1)
@@ -63,7 +63,7 @@ incompletas <- data %>%
 
 
 
-base2 <- jsonlite::read_json("input/data/original/vignetas rforms 2026-08-10.json", simplifyVector = TRUE)
+base2 <- jsonlite::read_json("input/data/original/vignetas rforms 2026-08-17.json", simplifyVector = TRUE)
 base2 <- as.data.frame(base2)
 
 data2 <- filter(base2, start_01==1)
