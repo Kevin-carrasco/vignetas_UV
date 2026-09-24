@@ -147,3 +147,72 @@ De las `r nrow(incompletas)` personas que no terminan la encuesta:
 - `r nrow(atencion1)` completan el módulo de atención luego de completar las viñetas.
 
 - `r nrow(modulo2)` completan el módulo de conflictos entre chilenos y otros.
+
+# Reporte base abierta
+
+```{r load-dataset-abierta, include=FALSE}
+load(file = here::here("output", "completas_abierta.RData"))
+load(file = here::here("output", "iniciadas_abierta.RData"))
+incompletas_abierta <- iniciadas_abierta %>%
+  filter(is.na(ended))
+```
+
+## Participantes
+
+Se han iniciado `r nrow(iniciadas_abierta)` encuestas en la versión abierta, de las cuales `r nrow(completas_abierta)` han sido completadas.
+
+## reporte completas
+
+**Curso**
+
+```{r}
+sjmisc::frq(completas_abierta$curso)
+```
+
+**Asignatura**
+
+```{r}
+sjmisc::frq(completas_abierta$asignatura)
+```
+
+**Región**
+
+```{r}
+sjmisc::frq(completas_abierta$region)
+```
+
+## reporte incompletas
+
+**Curso**
+
+```{r}
+sjmisc::frq(incompletas_abierta$curso)
+```
+
+**Asignatura**
+
+```{r}
+sjmisc::frq(incompletas_abierta$asignatura)
+```
+
+**Región**
+
+```{r}
+sjmisc::frq(incompletas_abierta$region)
+```
+
+### Abandono
+
+```{r}
+modulo1_abierta <- incompletas_abierta %>% filter(!is.na(e_civil))
+atencion1_abierta <- incompletas_abierta %>% filter(!is.na(atencion1))
+modulo2_abierta <- incompletas_abierta %>% filter(!is.na(gconflict_09))
+```
+
+De las `r nrow(incompletas_abierta)` personas que no terminan la encuesta:
+
+- `r nrow(modulo1_abierta)` completan la sección inicial de preguntas demográficas.
+
+- `r nrow(atencion1_abierta)` completan el módulo de atención luego de completar las viñetas.
+
+- `r nrow(modulo2_abierta)` completan el módulo de conflictos entre chilenos y otros.

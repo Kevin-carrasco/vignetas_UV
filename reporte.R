@@ -6,7 +6,7 @@ pacman::p_load(readr, dplyr, formr)
 #base <- data
 #base <- read_csv("input/data/original/vignetas 2026-05-19.csv")
 
-base <- jsonlite::read_json("input/data/original/vignetas 2026-08-17.json", simplifyVector = TRUE)
+base <- jsonlite::read_json("input/data/original/vignetas 2026-09-22.json", simplifyVector = TRUE)
 
 
 data <- filter(base, start_01==1)
@@ -63,7 +63,7 @@ incompletas <- data %>%
 
 
 
-base2 <- jsonlite::read_json("input/data/original/vignetas rforms 2026-08-17.json", simplifyVector = TRUE)
+base2 <- jsonlite::read_json("input/data/original/vignetas rforms 2026-09-21.json", simplifyVector = TRUE)
 base2 <- as.data.frame(base2)
 
 data2 <- filter(base2, start_01==1)
@@ -98,3 +98,37 @@ save(iniciadas, file="output/iniciadas.RData")
 save(completas, file="output/completas.RData")
 
 table(iniciadas$genero)
+
+
+################## Convocatoria abierta
+
+base_abierta <- jsonlite::read_json("input/data/original/vignetas abierto 2026-09-21.json", simplifyVector = TRUE)
+base_abierta <- as.data.frame(base_abierta)
+
+data_abierta <- filter(base_abierta, start_01==1)
+names(data_abierta)
+class(data_abierta$created)
+
+data_abierta <- data_abierta %>%
+  mutate(created = as.POSIXct(created))
+
+data_abierta <- data_abierta %>%
+  filter(created >= as.POSIXct("2026-05-01 00:00:00"))
+
+data_abierta <- data_abierta %>%
+  filter(!is.na(curso))
+
+sjmisc::frq(data_abierta$nombre_colegio)
+
+completas_abierta <- data_abierta %>%
+  filter(!is.na(ended))
+
+iniciadas_abierta <- data_abierta
+completan_vignetas <- data_abierta %>% filter(!is.na(gconflict_01))
+
+save(iniciadas_abierta, file="output/iniciadas_abierta.RData")
+# save(completan_vignetas, file="output/completan_vignetas.RData")
+save(completas_abierta, file="output/completas_abierta.RData")
+
+table(iniciadas_abierta$genero)
+
