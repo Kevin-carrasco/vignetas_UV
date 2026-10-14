@@ -74,7 +74,7 @@
     "href": "02-results.html#participantes-1",
     "title": "2  Reporte Resultados",
     "section": "\n3.1 Participantes",
-    "text": "3.1 Participantes\nSe han iniciado 1 encuestas en la versión abierta, de las cuales 1 han sido completadas.",
+    "text": "3.1 Participantes\nSe han iniciado 3 encuestas en la versión abierta, de las cuales 2 han sido completadas.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Reporte Resultados</span>"
     ]
@@ -84,7 +84,7 @@
     "href": "02-results.html#reporte-completas-1",
     "title": "2  Reporte Resultados",
     "section": "\n3.2 reporte completas",
-    "text": "3.2 reporte completas\nCurso\n\n\nx &lt;character&gt; \n# total N=1 valid N=1 mean=1.00 sd=NA\n\nValue | N | Raw % | Valid % | Cum. %\n------------------------------------\n1, 2  | 1 |   100 |     100 |    100\n&lt;NA&gt;  | 0 |     0 |    &lt;NA&gt; |   &lt;NA&gt;\n\n\nAsignatura\n\n\nx &lt;character&gt; \n# total N=1 valid N=1 mean=1.00 sd=NA\n\nValue                    | N | Raw % | Valid % | Cum. %\n-------------------------------------------------------\nTodas menos Inglés y EFI | 1 |   100 |     100 |    100\n&lt;NA&gt;                     | 0 |     0 |    &lt;NA&gt; |   &lt;NA&gt;\n\n\nRegión\n\n\nx &lt;character&gt; \n# total N=1 valid N=1 mean=6.00 sd=NA\n\nValue | N | Raw % | Valid % | Cum. %\n------------------------------------\n    6 | 1 |   100 |     100 |    100\n &lt;NA&gt; | 0 |     0 |    &lt;NA&gt; |   &lt;NA&gt;",
+    "text": "3.2 reporte completas\nCurso\n\n\nx &lt;character&gt; \n# total N=2 valid N=2 mean=1.50 sd=0.71\n\nValue | N | Raw % | Valid % | Cum. %\n------------------------------------\n1, 2  | 1 |    50 |      50 |     50\n3     | 1 |    50 |      50 |    100\n&lt;NA&gt;  | 0 |     0 |    &lt;NA&gt; |   &lt;NA&gt;\n\n\nAsignatura\n\n\nx &lt;character&gt; \n# total N=2 valid N=2 mean=1.50 sd=0.71\n\nValue                         | N | Raw % | Valid % | Cum. %\n------------------------------------------------------------\nCiencias naturales y sociales | 1 |    50 |      50 |     50\nTodas menos Inglés y EFI      | 1 |    50 |      50 |    100\n&lt;NA&gt;                          | 0 |     0 |    &lt;NA&gt; |   &lt;NA&gt;\n\n\nRegión\n\n\nx &lt;character&gt; \n# total N=2 valid N=2 mean=6.00 sd=0.00\n\nValue | N | Raw % | Valid % | Cum. %\n------------------------------------\n    6 | 2 |   100 |     100 |    100\n &lt;NA&gt; | 0 |     0 |    &lt;NA&gt; |   &lt;NA&gt;",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Reporte Resultados</span>"
     ]
@@ -94,7 +94,7 @@
     "href": "02-results.html#reporte-incompletas-1",
     "title": "2  Reporte Resultados",
     "section": "\n3.3 reporte incompletas",
-    "text": "3.3 reporte incompletas\nCurso\n\n\nNULL\n\n\nAsignatura\n\n\nNULL\n\n\nRegión\n\n\nNULL\n\n\n\n3.3.1 Abandono\nDe las 0 personas que no terminan la encuesta:\n\n0 completan la sección inicial de preguntas demográficas.\n0 completan el módulo de atención luego de completar las viñetas.\n0 completan el módulo de conflictos entre chilenos y otros.",
+    "text": "3.3 reporte incompletas\nCurso\n\n\nx &lt;character&gt; \n# total N=1 valid N=1 mean=3.00 sd=NA\n\nValue | N | Raw % | Valid % | Cum. %\n------------------------------------\n    3 | 1 |   100 |     100 |    100\n &lt;NA&gt; | 0 |     0 |    &lt;NA&gt; |   &lt;NA&gt;\n\n\nAsignatura\n\n\nx &lt;character&gt; \n# total N=1 valid N=1 mean=1.00 sd=NA\n\nValue                                                       | N | Raw %\n-----------------------------------------------------------------------\nLenguaje,matemáticas,música,historia,ciencias y orientación | 1 |   100\n&lt;NA&gt;                                                        | 0 |     0\n\nValue                                                       | Valid % | Cum. %\n------------------------------------------------------------------------------\nLenguaje,matemáticas,música,historia,ciencias y orientación |     100 |    100\n&lt;NA&gt;                                                        |    &lt;NA&gt; |   &lt;NA&gt;\n\n\nRegión\n\n\nx &lt;character&gt; \n# total N=1 valid N=1 mean=7.00 sd=NA\n\nValue | N | Raw % | Valid % | Cum. %\n------------------------------------\n    7 | 1 |   100 |     100 |    100\n &lt;NA&gt; | 0 |     0 |    &lt;NA&gt; |   &lt;NA&gt;\n\n\n\n3.3.1 Abandono\nDe las 1 personas que no terminan la encuesta:\n\n1 completan la sección inicial de preguntas demográficas.\n1 completan el módulo de atención luego de completar las viñetas.\n0 completan el módulo de conflictos entre chilenos y otros.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Reporte Resultados</span>"
     ]

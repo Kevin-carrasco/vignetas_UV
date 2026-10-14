@@ -6,46 +6,46 @@ pacman::p_load(readr, dplyr, formr)
 #base <- data
 #base <- read_csv("input/data/original/vignetas 2026-05-19.csv")
 
-base <- jsonlite::read_json("input/data/original/vignetas 2026-09-22.json", simplifyVector = TRUE)
+base <- jsonlite::read_json("input/data/original/vignetas 2026-10-14.json", simplifyVector = TRUE)
 
 
-data <- filter(base, start_01==1)
+data <- dplyr::filter(base, start_01==1)
 names(data)
 class(data$created)
 
 data <- data %>%
-  mutate(created = as.POSIXct(created))
+  dplyr::mutate(created = as.POSIXct(created))
 
 data <- data %>%
-  filter(created >= as.POSIXct("2026-05-01 00:00:00"))
+  dplyr::filter(created >= as.POSIXct("2026-05-01 00:00:00"))
 
 data <- data %>%
-  filter(!is.na(curso))
+  dplyr::filter(!is.na(curso))
 
 sjmisc::frq(data$nombre_colegio)
 
 data <- data %>%
-  filter(nombre_colegio!="123")
+  dplyr::filter(nombre_colegio!="123")
 data <- data %>%
-  filter(nombre_colegio!="test")
+  dplyr::filter(nombre_colegio!="test")
 
 # bajo_rendimiento <- data %>%
-#   filter(ran_group == 1)
+#   dplyr::filter(ran_group == 1)
 # 
 # alto_rendimiento <- data %>%
-#   filter(ran_group == 2)
+#   dplyr::filter(ran_group == 2)
 
 completas <- data %>%
-  filter(!is.na(ended))
+  dplyr::filter(!is.na(ended))
 
 incompletas <- data %>%
-  filter(is.na(ended))
+  dplyr::filter(is.na(ended))
 
 # bajo_rendimiento <- completas %>%
-#   filter(ran_group == 1)
+#   dplyr::filter(ran_group == 1)
 # 
 # alto_rendimiento <- completas %>%
-#   filter(ran_group == 2)
+#   dplyr::filter(ran_group == 2)
 
 
 #completan_vignetas <- incompletas %>% filter(!is.na(gconflict_01))
@@ -102,7 +102,7 @@ table(iniciadas$genero)
 
 ################## Convocatoria abierta
 
-base_abierta <- jsonlite::read_json("input/data/original/vignetas abierto 2026-09-21.json", simplifyVector = TRUE)
+base_abierta <- jsonlite::read_json("input/data/original/vignetas abierto 2026-10-14.json", simplifyVector = TRUE)
 base_abierta <- as.data.frame(base_abierta)
 
 data_abierta <- filter(base_abierta, start_01==1)
