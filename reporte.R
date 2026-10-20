@@ -102,7 +102,7 @@ table(iniciadas$genero)
 
 ################## Convocatoria abierta
 
-base_abierta <- jsonlite::read_json("input/data/original/vignetas abierto 2026-10-14.json", simplifyVector = TRUE)
+base_abierta <- jsonlite::read_json("input/data/original/vignetas abierto 2026-10-19.json", simplifyVector = TRUE)
 base_abierta <- as.data.frame(base_abierta)
 
 data_abierta <- filter(base_abierta, start_01==1)
